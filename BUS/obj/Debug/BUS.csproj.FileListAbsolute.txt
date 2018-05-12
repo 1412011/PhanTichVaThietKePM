@@ -1,0 +1,11 @@
+D:\C#\QuanLyHocSinhCap3\BUS\bin\Debug\BUS.dll
+D:\C#\QuanLyHocSinhCap3\BUS\bin\Debug\BUS.pdb
+D:\C#\QuanLyHocSinhCap3\BUS\bin\Debug\DAO.dll
+D:\C#\QuanLyHocSinhCap3\BUS\bin\Debug\DTO.dll
+D:\C#\QuanLyHocSinhCap3\BUS\bin\Debug\DAO.pdb
+D:\C#\QuanLyHocSinhCap3\BUS\bin\Debug\DTO.pdb
+D:\C#\QuanLyHocSinhCap3\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+D:\C#\QuanLyHocSinhCap3\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\C#\QuanLyHocSinhCap3\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\C#\QuanLyHocSinhCap3\BUS\obj\Debug\BUS.dll
+D:\C#\QuanLyHocSinhCap3\BUS\obj\Debug\BUS.pdb
