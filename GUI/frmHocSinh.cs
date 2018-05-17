@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmHocSinh : Form
+    public partial class frmHocSinh : DevExpress.XtraEditors.XtraForm
     {
         public frmHocSinh()
         {

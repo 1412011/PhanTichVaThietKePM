@@ -18,7 +18,7 @@ namespace DTO
         [Key]
         public int maDiaChi { get; set; }
 
-        [StringLength(10)]
+        [StringLength(100)]
         public string soNha { get; set; }
 
         [StringLength(50)]
