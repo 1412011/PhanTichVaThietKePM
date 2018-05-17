@@ -32,5 +32,34 @@ namespace GUI
         {
 
         }
+
+        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmGiaoVien formgv = new frmGiaoVien();
+            existFormChild(formgv);
+            formgv.MdiParent = this;
+            formgv.Show();
+        }
+
+        private bool existFormChild(XtraForm form)
+        {
+            foreach(XtraForm child in MdiChildren)
+            {
+                if(child.Name == form.Name)
+                {
+                    child.Activate();
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmHocSinh f = new frmHocSinh();
+            existFormChild(f);
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }

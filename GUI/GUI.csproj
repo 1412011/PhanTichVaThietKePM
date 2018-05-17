@@ -77,6 +77,11 @@
     <Compile Include="frmGiaoVien.Designer.cs">
       <DependentUpon>frmGiaoVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="QUANLYHOCSINHDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLYHOCSINHDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmGiaoVien.resx">
       <DependentUpon>frmGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +126,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="QUANLYHOCSINHDataSet.xsc">
+      <DependentUpon>QUANLYHOCSINHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLYHOCSINHDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QUANLYHOCSINHDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QUANLYHOCSINHDataSet.xss">
+      <DependentUpon>QUANLYHOCSINHDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\save.png" />
   </ItemGroup>
   <ItemGroup>

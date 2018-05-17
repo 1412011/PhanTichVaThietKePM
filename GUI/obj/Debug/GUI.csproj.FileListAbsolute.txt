@@ -212,3 +212,10 @@ D:\Git DOAN\PTTKPM_HSCAP3\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 D:\Git DOAN\PTTKPM_HSCAP3\GUI\obj\Debug\GUI.csproj.CopyComplete
 D:\Git DOAN\PTTKPM_HSCAP3\GUI\obj\Debug\GUI.exe
 D:\Git DOAN\PTTKPM_HSCAP3\GUI\obj\Debug\GUI.pdb
+D:\Git DOAN\PTTKPM_HSCAP3\GUI\obj\Debug\GUI.frmGiaoVien.resources
+D:\Git DOAN\PTTKPM_HSCAP3\GUI\obj\Debug\GUI.frmMain.resources
+D:\Git DOAN\PTTKPM_HSCAP3\GUI\bin\Debug\EntityFramework.dll
+D:\Git DOAN\PTTKPM_HSCAP3\GUI\bin\Debug\DTO.dll.config
+D:\Git DOAN\PTTKPM_HSCAP3\GUI\bin\Debug\EntityFramework.xml
+D:\Git DOAN\PTTKPM_HSCAP3\GUI\bin\Debug\DAO.dll
+D:\Git DOAN\PTTKPM_HSCAP3\GUI\bin\Debug\DAO.pdb
