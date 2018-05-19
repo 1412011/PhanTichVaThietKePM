@@ -23,7 +23,7 @@ namespace BUS
             DataRow row = dt.Rows[0];
             return new DIACHI()
             {
-                maDiaChi = (int)row["maDiaChi"],
+                maDiaChi = (row["maDiaChi"] == DBNull.Value) ? (-1) : (int)row["maDiaChi"],
                 soNha = (String)row["soNha"],
                 duong = (String)row["duong"],
                 xa = (String)row["xa"],

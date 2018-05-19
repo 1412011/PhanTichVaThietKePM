@@ -22,8 +22,8 @@ namespace BUS
             DataRow row = dt.Rows[0];
             return new GIAOVIEN()
             {
-                maNguoiDung = (int)row["maNguoiDung"],
-                monDay = (int)row["monDay"],
+                maNguoiDung = (row["maNguoiDung"] == DBNull.Value) ? (-1) : (int)row["maNguoiDung"],
+                monDay = (row["monDay"] == DBNull.Value) ? (-1) : (int)row["monDay"],
             };
         }
         public int get_unique_last()

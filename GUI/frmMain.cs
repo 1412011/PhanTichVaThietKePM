@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.XtraBars.Helpers;
 
 namespace GUI
 {
@@ -60,6 +61,16 @@ namespace GUI
             existFormChild(f);
             f.MdiParent = this;
             f.Show();
+        }
+
+        private void ribbonControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            SkinHelper.InitSkinPopupMenu(barLinkContainerItem1);
         }
     }
 }

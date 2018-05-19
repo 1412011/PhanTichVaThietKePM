@@ -7,15 +7,3 @@ D:\C#\QuanLyHocSinhCap3\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
 D:\C#\QuanLyHocSinhCap3\DAO\obj\Debug\DAO.csproj.CopyComplete
 D:\C#\QuanLyHocSinhCap3\DAO\obj\Debug\DAO.dll
 D:\C#\QuanLyHocSinhCap3\DAO\obj\Debug\DAO.pdb
-D:\Git DOAN\PTTKPM_HSCAP3\DAO\bin\Debug\DAO.dll
-D:\Git DOAN\PTTKPM_HSCAP3\DAO\bin\Debug\DAO.pdb
-D:\Git DOAN\PTTKPM_HSCAP3\DAO\bin\Debug\DTO.dll
-D:\Git DOAN\PTTKPM_HSCAP3\DAO\bin\Debug\DTO.pdb
-D:\Git DOAN\PTTKPM_HSCAP3\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
-D:\Git DOAN\PTTKPM_HSCAP3\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
-D:\Git DOAN\PTTKPM_HSCAP3\DAO\obj\Debug\DAO.csproj.CopyComplete
-D:\Git DOAN\PTTKPM_HSCAP3\DAO\obj\Debug\DAO.dll
-D:\Git DOAN\PTTKPM_HSCAP3\DAO\obj\Debug\DAO.pdb
-D:\Git DOAN\PTTKPM_HSCAP3\DAO\bin\Debug\EntityFramework.dll
-D:\Git DOAN\PTTKPM_HSCAP3\DAO\bin\Debug\DTO.dll.config
-D:\Git DOAN\PTTKPM_HSCAP3\DAO\bin\Debug\EntityFramework.xml

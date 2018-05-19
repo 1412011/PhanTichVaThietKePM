@@ -23,7 +23,7 @@ namespace DAO
         }
         public int update(GIAOVIEN ett)
         {
-            String sql = String.Format("UPDATE GIAOVIEN SET (monDay={0})",ett.monDay);
+            String sql = String.Format("UPDATE GIAOVIEN SET monDay={0} WHERE maNguoiDung = {1}",ett.monDay,ett.maNguoiDung);
             return ccf.excuteNonQuery(sql);
         }
         public int delete(int id)
@@ -33,7 +33,7 @@ namespace DAO
         }
         public int insert(GIAOVIEN e)
         {
-            String sql = String.Format("INSERT INTO GIAOVIEN (maNguoiDung={0}, monDay={1})",e.maNguoiDung, e.monDay);
+            String sql = String.Format("INSERT INTO GIAOVIEN VALUES({0},{1})",e.monDay, e.maNguoiDung);
             return ccf.excuteNonQuery(sql);
         }
         public DataTable get_unique_last()
