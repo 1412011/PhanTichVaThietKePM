@@ -12,8 +12,8 @@ namespace DAO
 {
     public class ConnectorFactory
     {
-        //protected static String stringConnect = "Data Source=DESKTOP-AQS6PEQ;Initial Catalog=QuanLySinhVien;Integrated Security=True";
-        protected static String stringConnect = ConfigurationManager.ConnectionStrings["QLHS"].ConnectionString;
+        protected static String stringConnect = @"Data Source=DESKTOP-F2SPA4J\SQLEXPRESS;Initial Catalog=QUANLYHOCSINH;Integrated Security=True";
+        //protected static String stringConnect = ConfigurationManager.ConnectionStrings["QLHS"].ConnectionString;
         protected SqlConnection cnn = new SqlConnection(stringConnect);
 
         public ConnectorFactory()
