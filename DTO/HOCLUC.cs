@@ -20,11 +20,11 @@ namespace DTO
         [StringLength(10)]
         public string tenHocLuc { get; set; }
 
-        public int? diemCanTren { get; set; }
+        public double? diemCanTren { get; set; }
 
-        public int? diemCanDuoi { get; set; }
+        public double? diemCanDuoi { get; set; }
 
-        public int? diemKhongChe { get; set; }
+        public double? diemKhongChe { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<KETQUACANAM> KETQUACANAMs { get; set; }
