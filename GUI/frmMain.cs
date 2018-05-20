@@ -21,7 +21,7 @@ namespace GUI
 
         private void barButtonItem15_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            _OpenForm_New(new frmKhoiLop());
         }
 
         private void barButtonItem16_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -36,10 +36,7 @@ namespace GUI
 
         private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmGiaoVien formgv = new frmGiaoVien();
-            if(existFormChild(formgv))return;
-            formgv.MdiParent = this;
-            formgv.Show();
+            _OpenForm_New(new frmGiaoVien());
         }
 
         private bool existFormChild(XtraForm form)
@@ -57,10 +54,7 @@ namespace GUI
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmHocSinh f = new frmHocSinh();
-            if (existFormChild(f)) return;
-            f.MdiParent = this;
-            f.Show();
+            _OpenForm_New(new frmHocSinh());
         }
 
         private void ribbonControl1_Click(object sender, EventArgs e)
@@ -71,6 +65,44 @@ namespace GUI
         private void frmMain_Load(object sender, EventArgs e)
         {
             SkinHelper.InitSkinPopupMenu(barLinkContainerItem1);
+        }
+
+        private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            _OpenForm_New(new frmBoMon());
+        }
+
+        private void barButtonItemNamHoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            _OpenForm_New(new frmNamHoc());
+        }
+        private void _OpenForm_New(XtraForm f)
+        {
+            if (!existFormChild(f))
+            {
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItemHanhKiem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            _OpenForm_New(new frmHanhKiem());
+        }
+
+        private void barButtonItemHocLuc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            _OpenForm_New(new frmHocLuc());
+        }
+
+        private void barButtonItemHocKy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            _OpenForm_New(new HocKy());
+        }
+
+        private void barButtonItemQuiDinh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            _OpenForm_New(new frmQuyDinh());
         }
     }
 }
