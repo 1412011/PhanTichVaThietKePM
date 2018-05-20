@@ -31,6 +31,21 @@ namespace DAO
             String sql = String.Format("DELETE FROM GIAOVIEN WHERE maNguoiDung={0}", id);
             return ccf.excuteNonQuery(sql);
         }
+
+        public DataTable getBangDiem(string namhoc, string hocky, string maHS)
+        {
+            String sql = "select*";
+            if (string.IsNullOrEmpty(namhoc) && string.IsNullOrEmpty(hocky))
+            {
+                return new DataTable();
+            }
+            else if (!string.IsNullOrEmpty(maHS))
+            {
+                sql += $" from BANGDIEM where mon_lop = {maHS}";
+            }
+            return ccf.getDatatable(sql);
+        }
+
         public int insert(GIAOVIEN e)
         {
             String sql = String.Format("INSERT INTO GIAOVIEN VALUES({0},{1})",e.monDay, e.maNguoiDung);

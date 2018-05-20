@@ -135,9 +135,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(40, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 13);
+            this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Mã học sinh";
+            this.label3.Text = "Mã Môn Lớp";
             // 
             // textBox3
             // 
@@ -155,6 +155,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Tìm kiếm";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmBangDiem
             // 

@@ -26,6 +26,12 @@ namespace BUS
                 monDay = (row["monDay"] == DBNull.Value) ? (-1) : (int)row["monDay"],
             };
         }
+
+        public DataTable getBangDiem(string namhoc, string hocky, string maHS)
+        {
+            return dao_GiaoVien.getBangDiem(namhoc, hocky, maHS);
+        }
+
         public int get_unique_last()
         {
             DataTable dt = dao_GiaoVien.get_unique_last();
@@ -54,7 +60,7 @@ namespace BUS
 
         public DataTable getKetQua(string namhoc, string hocky)
         {
-            return dao_GiaoVien.getKetQua();
+            return dao_GiaoVien.getKetQua(namhoc, hocky);
         }
     }
 }

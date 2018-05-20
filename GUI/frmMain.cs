@@ -79,5 +79,11 @@ namespace GUI
             frmTKB tkb = new frmTKB();
             tkb.Show();
         }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmKetQua kq = new frmKetQua();
+            kq.Show();
+        }
     }
 }
