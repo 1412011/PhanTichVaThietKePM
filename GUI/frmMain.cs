@@ -56,10 +56,10 @@ namespace GUI
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmHocSinh f = new frmHocSinh();
-            existFormChild(f);
-            f.MdiParent = this;
-            f.Show();
+            //frmHocSinh f = new frmHocSinh();
+            //existFormChild(f);
+            //f.MdiParent = this;
+            //f.Show();
         }
     }
 }
