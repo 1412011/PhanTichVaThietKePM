@@ -51,5 +51,10 @@ namespace BUS
         {
             return dao_nguoidung.insert(entity);
         }
+        public int dangnhap(string text1, string text2)
+        {
+            DataTable rs = dao_nguoidung.DangNhap(text1, text2);
+            return rs.Rows.Count;
+        }
     }
 }

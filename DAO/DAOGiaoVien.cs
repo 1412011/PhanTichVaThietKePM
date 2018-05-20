@@ -31,6 +31,21 @@ namespace DAO
             String sql = String.Format("DELETE FROM GIAOVIEN WHERE maNguoiDung={0}", id);
             return ccf.excuteNonQuery(sql);
         }
+
+        public DataTable getBangDiem(string namhoc, string hocky, string maHS)
+        {
+            String sql = "select*";
+            if (string.IsNullOrEmpty(namhoc) && string.IsNullOrEmpty(hocky))
+            {
+                return new DataTable();
+            }
+            else if (!string.IsNullOrEmpty(maHS))
+            {
+                sql += $" from BANGDIEM where mon_lop = {maHS}";
+            }
+            return ccf.getDatatable(sql);
+        }
+
         public int insert(GIAOVIEN e)
         {
             String sql = String.Format("INSERT INTO GIAOVIEN VALUES({0},{1})",e.monDay, e.maNguoiDung);
@@ -48,6 +63,24 @@ namespace DAO
                 "FROM BoMon bm, GIAOVIEN gv, NGUOIDUNG ng, DIACHI dc " +
                 "WHERE bm.maBoMon = gv.monDay AND ng.maNguoiDung = gv.maNguoiDung AND dc.maDiaChi = ng.diaChi");
 
+            return ccf.getDatatable(sql);
+        }
+
+        public DataTable getKetQua(string namhoc, string hocky)
+        {
+            String sql = "select*";
+            if (string.IsNullOrEmpty(namhoc) && string.IsNullOrEmpty(hocky))
+            {
+                return new DataTable();
+            }
+            else if (!string.IsNullOrEmpty(hocky))
+            {
+                sql += $" from KETQUAHOCKY where hocKy = {hocky}";
+            }
+            else if (!string.IsNullOrEmpty(namhoc))
+            {
+                sql += $" from KETQUANAMHOC";
+            }
             return ccf.getDatatable(sql);
         }
     }

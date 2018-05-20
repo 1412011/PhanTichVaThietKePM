@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="frmBoMon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +76,25 @@
     </Compile>
     <Compile Include="frmHocLuc.Designer.cs">
       <DependentUpon>frmHocLuc.cs</DependentUpon>
+=======
+    <Compile Include="frmBangDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBangDiem.Designer.cs">
+      <DependentUpon>frmBangDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangKy.Designer.cs">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+>>>>>>> eca7c7db6d230c53211bdcb082c565e3685241e0
     </Compile>
     <Compile Include="frmHocSinh.cs">
       <SubType>Form</SubType>
@@ -82,6 +102,7 @@
     <Compile Include="frmHocSinh.Designer.cs">
       <DependentUpon>frmHocSinh.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="frmKhoiLop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +114,13 @@
     </Compile>
     <Compile Include="frmLopHoc.Designer.cs">
       <DependentUpon>frmLopHoc.cs</DependentUpon>
+=======
+    <Compile Include="frmKetQua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKetQua.Designer.cs">
+      <DependentUpon>frmKetQua.cs</DependentUpon>
+>>>>>>> eca7c7db6d230c53211bdcb082c565e3685241e0
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -100,6 +128,7 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="frmNamHoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +141,8 @@
     <Compile Include="frmQuyDinh.Designer.cs">
       <DependentUpon>frmQuyDinh.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> eca7c7db6d230c53211bdcb082c565e3685241e0
     <Compile Include="frmTKB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,8 +172,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QUANLYHOCSINHDataSet.xsd</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="frmBoMon.resx">
       <DependentUpon>frmBoMon.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="frmBangDiem.resx">
+      <DependentUpon>frmBangDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangKy.resx">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+>>>>>>> eca7c7db6d230c53211bdcb082c565e3685241e0
     </EmbeddedResource>
     <EmbeddedResource Include="frmGiaoVien.resx">
       <DependentUpon>frmGiaoVien.cs</DependentUpon>
@@ -156,15 +198,21 @@
     <EmbeddedResource Include="frmHocSinh.resx">
       <DependentUpon>frmHocSinh.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="frmKhoiLop.resx">
       <DependentUpon>frmKhoiLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLopHoc.resx">
       <DependentUpon>frmLopHoc.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="frmKetQua.resx">
+      <DependentUpon>frmKetQua.cs</DependentUpon>
+>>>>>>> eca7c7db6d230c53211bdcb082c565e3685241e0
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="frmNamHoc.resx">
       <DependentUpon>frmNamHoc.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +221,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HocKy.resx">
       <DependentUpon>HocKy.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="frmTKB.resx">
+      <DependentUpon>frmTKB.cs</DependentUpon>
+>>>>>>> eca7c7db6d230c53211bdcb082c565e3685241e0
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -202,6 +254,10 @@
     <ProjectReference Include="..\BUS\BUS.csproj">
       <Project>{6e51ea9c-aae2-4270-9ea9-247d2621def9}</Project>
       <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{22686dab-4541-440f-918f-a3d8168e8db9}</Project>
+      <Name>DAO</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{d7bbc9cb-ec57-4cb0-8d3d-afe8e03c6e9e}</Project>

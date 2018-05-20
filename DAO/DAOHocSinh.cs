@@ -29,6 +29,17 @@ namespace DAO
                 , ett.hoTen,ett.gioiTinh,ett.ngaySinh,ett.noiSinh,ett.hoTenCha,ett.ngheNghiepCha,ett.hoTenMe,ett.ngheNghiepMe,ett.maHocSinh);
             return ccf.excuteNonQuery(sql);
         }
+
+        public DataTable getTKB(string lop)
+        {
+            String sql = "select* from THOIKHOABIEU";
+            if (!string.IsNullOrEmpty(lop))
+            {
+                sql += $"where maMon_Lop = {lop}";
+            }
+            return ccf.getDatatable(sql);
+        }
+
         public int delete(int id)
         {
             String sql = String.Format("DELETE FROM HOCSINH WHERE maHocSinh={0}", id);

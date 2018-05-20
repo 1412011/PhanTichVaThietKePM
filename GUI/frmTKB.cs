@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace GUI
         public frmTKB()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BUSHocSinh busHS = new BUSHocSinh();
+            gtkb.DataSource = busHS.getTKB(textBox1.Text);
         }
     }
 }

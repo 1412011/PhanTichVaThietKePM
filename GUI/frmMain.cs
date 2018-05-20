@@ -26,7 +26,8 @@ namespace GUI
 
         private void barButtonItem16_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            frmBangDiem bd = new frmBangDiem();
+            bd.Show();
         }
 
         private void barButtonItem19_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -67,6 +68,7 @@ namespace GUI
             SkinHelper.InitSkinPopupMenu(barLinkContainerItem1);
         }
 
+<<<<<<< HEAD
         private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             _OpenForm_New(new frmBoMon());
@@ -103,6 +105,18 @@ namespace GUI
         private void barButtonItemQuiDinh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             _OpenForm_New(new frmQuyDinh());
+=======
+        private void barButtonItem18_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmTKB tkb = new frmTKB();
+            tkb.Show();
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmKetQua kq = new frmKetQua();
+            kq.Show();
+>>>>>>> eca7c7db6d230c53211bdcb082c565e3685241e0
         }
     }
 }
