@@ -63,6 +63,7 @@ namespace GUI
 
         private void gridViewGV_RowClick_1(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
+            if (e.RowHandle < 0) return;
             All_button_enable(true);
             _Enable_Button(btnLuu,false);
             _ReadOnly_Text(true);
@@ -318,6 +319,28 @@ namespace GUI
                 MessageBox.Show("Xóa thành công Giáo viên có mã là "+id_ng+" !!!", "Thành công", MessageBoxButtons.OK);
                 btnRefresh_Click(null, null);
                 lblChucNangHientai.Text = _KHONG_;
+            }
+        }
+
+        private void gridControlGV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTengv_Validating(object sender, CancelEventArgs e)
+        {
+            string errorMsg;
+            if (String.IsNullOrEmpty(txtTengv.Text) && txtTengv.ReadOnly == false)
+            {
+                // Cancel the event and select the text to be corrected by the user.
+                e.Cancel = true;
+                txtTengv.Focus();
+                this.errorProvidergv.SetError(txtTengv, "Họ tên học sinh không được trống");
+            }
+            else
+            {
+                e.Cancel = false;
+                this.errorProvidergv.SetError(txtTengv, null);
             }
         }
     }

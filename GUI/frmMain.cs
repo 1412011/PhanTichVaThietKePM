@@ -37,7 +37,7 @@ namespace GUI
         private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frmGiaoVien formgv = new frmGiaoVien();
-            existFormChild(formgv);
+            if(existFormChild(formgv))return;
             formgv.MdiParent = this;
             formgv.Show();
         }
@@ -46,7 +46,7 @@ namespace GUI
         {
             foreach(XtraForm child in MdiChildren)
             {
-                if(child.Name == form.Name)
+                if(child.Name.Equals(form.Name))
                 {
                     child.Activate();
                     return true;
@@ -58,7 +58,7 @@ namespace GUI
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frmHocSinh f = new frmHocSinh();
-            existFormChild(f);
+            if (existFormChild(f)) return;
             f.MdiParent = this;
             f.Show();
         }

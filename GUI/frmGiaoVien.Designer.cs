@@ -43,7 +43,6 @@
             this.txtTaiKhoan = new DevExpress.XtraEditors.TextEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.txtPhuong = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
@@ -115,6 +114,7 @@
             this.bindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.txtMatKhau = new DevExpress.XtraEditors.GroupControl();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.lblChucNangHientai = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
@@ -123,7 +123,7 @@
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.errorProvidergv = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.navBarControl1.SuspendLayout();
             this.navBarGroupControlContainer1.SuspendLayout();
@@ -160,8 +160,9 @@
             this.bindingNavigatordanhsachGV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau)).BeginInit();
             this.txtMatKhau.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvidergv)).BeginInit();
             this.SuspendLayout();
             // 
             // navBarControl1
@@ -211,7 +212,6 @@
             this.panel1.Controls.Add(this.txtTaiKhoan);
             this.panel1.Controls.Add(this.labelControl12);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.simpleButton1);
             this.panel1.Controls.Add(this.labelControl11);
             this.panel1.Controls.Add(this.txtPhuong);
             this.panel1.Controls.Add(this.labelControl9);
@@ -248,7 +248,7 @@
             this.txtMatKhau1.Properties.PasswordChar = '*';
             this.txtMatKhau1.Properties.ReadOnly = true;
             this.txtMatKhau1.Size = new System.Drawing.Size(204, 20);
-            this.txtMatKhau1.TabIndex = 33;
+            this.txtMatKhau1.TabIndex = 9;
             // 
             // labelControl16
             // 
@@ -273,7 +273,7 @@
             this.txtMaDiachi.Name = "txtMaDiachi";
             this.txtMaDiachi.Properties.ReadOnly = true;
             this.txtMaDiachi.Size = new System.Drawing.Size(204, 20);
-            this.txtMaDiachi.TabIndex = 31;
+            this.txtMaDiachi.TabIndex = 10;
             // 
             // btnNullEmpty
             // 
@@ -299,7 +299,7 @@
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Properties.ReadOnly = true;
             this.txtTaiKhoan.Size = new System.Drawing.Size(204, 20);
-            this.txtTaiKhoan.TabIndex = 26;
+            this.txtTaiKhoan.TabIndex = 8;
             // 
             // labelControl12
             // 
@@ -316,14 +316,6 @@
             this.panel2.Size = new System.Drawing.Size(207, 28);
             this.panel2.TabIndex = 24;
             // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(51, 634);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(124, 32);
-            this.simpleButton1.TabIndex = 23;
-            this.simpleButton1.Text = "Xác nhận";
-            // 
             // labelControl11
             // 
             this.labelControl11.Location = new System.Drawing.Point(14, 584);
@@ -338,7 +330,7 @@
             this.txtPhuong.Name = "txtPhuong";
             this.txtPhuong.Properties.ReadOnly = true;
             this.txtPhuong.Size = new System.Drawing.Size(204, 20);
-            this.txtPhuong.TabIndex = 20;
+            this.txtPhuong.TabIndex = 13;
             // 
             // labelControl9
             // 
@@ -354,7 +346,7 @@
             this.txtQuan.Name = "txtQuan";
             this.txtQuan.Properties.ReadOnly = true;
             this.txtQuan.Size = new System.Drawing.Size(204, 20);
-            this.txtQuan.TabIndex = 18;
+            this.txtQuan.TabIndex = 14;
             // 
             // labelControl10
             // 
@@ -378,7 +370,7 @@
             this.txtDuong.Name = "txtDuong";
             this.txtDuong.Properties.ReadOnly = true;
             this.txtDuong.Size = new System.Drawing.Size(204, 20);
-            this.txtDuong.TabIndex = 14;
+            this.txtDuong.TabIndex = 12;
             // 
             // labelControl8
             // 
@@ -395,7 +387,7 @@
             this.panelControl2.Location = new System.Drawing.Point(14, 155);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(126, 28);
-            this.panelControl2.TabIndex = 12;
+            this.panelControl2.TabIndex = 4;
             // 
             // rbNu
             // 
@@ -427,7 +419,7 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Properties.ReadOnly = true;
             this.txtSDT.Size = new System.Drawing.Size(204, 20);
-            this.txtSDT.TabIndex = 11;
+            this.txtSDT.TabIndex = 6;
             // 
             // labelControl6
             // 
@@ -444,7 +436,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(204, 20);
-            this.txtEmail.TabIndex = 9;
+            this.txtEmail.TabIndex = 7;
             // 
             // labelControl5
             // 
@@ -476,7 +468,8 @@
             this.txtTengv.Name = "txtTengv";
             this.txtTengv.Properties.ReadOnly = true;
             this.txtTengv.Size = new System.Drawing.Size(204, 20);
-            this.txtTengv.TabIndex = 3;
+            this.txtTengv.TabIndex = 2;
+            this.txtTengv.Validating += new System.ComponentModel.CancelEventHandler(this.txtTengv_Validating);
             // 
             // labelControl2
             // 
@@ -555,6 +548,7 @@
             "Hậu Giang",
             "Hòa Bình",
             "Hưng Yên",
+            "Hà Nội",
             "Khánh Hòa",
             "Kiên Giang",
             "Kon Tum",
@@ -594,7 +588,7 @@
             "TP HCM"});
             this.cbTinh.Properties.ReadOnly = true;
             this.cbTinh.Size = new System.Drawing.Size(204, 20);
-            this.cbTinh.TabIndex = 22;
+            this.cbTinh.TabIndex = 15;
             // 
             // cbBomon
             // 
@@ -611,7 +605,7 @@
             this.cbBomon.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbBomon.Properties.ValueMember = "maBoMon";
             this.cbBomon.Size = new System.Drawing.Size(204, 20);
-            this.cbBomon.TabIndex = 28;
+            this.cbBomon.TabIndex = 3;
             // 
             // txtSonha
             // 
@@ -619,7 +613,7 @@
             this.txtSonha.Name = "txtSonha";
             this.txtSonha.Properties.ReadOnly = true;
             this.txtSonha.Size = new System.Drawing.Size(204, 20);
-            this.txtSonha.TabIndex = 16;
+            this.txtSonha.TabIndex = 11;
             // 
             // navBarGroupControlContainer2
             // 
@@ -723,6 +717,7 @@
             this.gridControlGV.TabIndex = 1;
             this.gridControlGV.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewGV});
+            this.gridControlGV.Click += new System.EventHandler(this.gridControlGV_Click);
             // 
             // gridViewGV
             // 
@@ -1057,6 +1052,16 @@
             this.txtMatKhau.Text = "Chức năng";
             this.txtMatKhau.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl2_Paint);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lblChucNangHientai);
+            this.panel3.Controls.Add(this.labelControl14);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(545, 20);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(215, 46);
+            this.panel3.TabIndex = 7;
+            // 
             // lblChucNangHientai
             // 
             this.lblChucNangHientai.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1130,15 +1135,9 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // panel3
+            // errorProvidergv
             // 
-            this.panel3.Controls.Add(this.lblChucNangHientai);
-            this.panel3.Controls.Add(this.labelControl14);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(545, 20);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(215, 46);
-            this.panel3.TabIndex = 7;
+            this.errorProvidergv.ContainerControl = this;
             // 
             // frmGiaoVien
             // 
@@ -1149,7 +1148,7 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.navBarControl1);
             this.Name = "frmGiaoVien";
-            this.Text = "XtraForm2";
+            this.Text = "GIÁO VIÊN";
             this.Load += new System.EventHandler(this.frmGiaoVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             this.navBarControl1.ResumeLayout(false);
@@ -1192,9 +1191,10 @@
             this.bindingNavigatordanhsachGV.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau)).EndInit();
             this.txtMatKhau.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvidergv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1225,7 +1225,6 @@
         private DevExpress.XtraEditors.TextEdit txtMagv;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.DateEdit txtNgaySinh;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.TextEdit txtPhuong;
         private DevExpress.XtraEditors.LabelControl labelControl9;
@@ -1295,5 +1294,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ErrorProvider errorProvidergv;
     }
 }
