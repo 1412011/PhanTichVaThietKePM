@@ -24,7 +24,8 @@ namespace DAO
         public int update(DIACHI dc)
         {
             String sql = String.Format("UPDATE DIACHI " +
-                "SET(soNha = N'{0}',duong = N'{1}',xa = N'{2}',huyen = N'{3}',tinh = N'{4}')",dc.soNha,dc.duong,dc.xa,dc.huyen,dc.tinh);
+                "SET soNha = N'{0}',duong = N'{1}',xa = N'{2}',huyen = N'{3}',tinh = N'{4}' WHERE maDiaChi={5}"
+                ,dc.soNha, dc.duong, dc.xa, dc.huyen, dc.tinh, dc.maDiaChi);
             return ccf.excuteNonQuery(sql);
         }
         public int delete(int id)
