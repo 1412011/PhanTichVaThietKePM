@@ -24,8 +24,8 @@ namespace DAO
         public int update(BOMON e)
         {
             String sql = String.Format("UPDATE BOMON " +
-                "SET(tenBoMon = N'{0}',soTietHoc = {1}, heSoMon = {2}, truongBoMon = {3})"
-                , e.tenMonHoc, e.soTietHoc, e.heSoMon, e.truongBoMon);
+                "SET tenBoMon = N'{0}',soTietHoc = {1}, heSoMon = {2}, truongBoMon = {3} WHERE maBoMon={4}"
+                , e.tenMonHoc, e.soTietHoc, e.heSoMon, e.truongBoMon, e.maBoMon);
             return ccf.excuteNonQuery(sql);
         }
         public int delete(int id)
