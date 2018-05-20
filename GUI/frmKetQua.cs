@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -114,37 +115,18 @@ namespace GUI
         //Button Tìm kếm và xử lý tìm kiếm
         private void btTimKiemTP_Click(object sender, EventArgs e)
         {
-            if (tbThanhPho.Text.Length == 0)
-            {
-                MessageBox.Show("Bạn chưa nhập thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
-            //dataGridView1.DataSource = null;
+            string namhoc = tbNamHoc.Text;
+            string hocky = tbHocky.Text;
             DataTable dsKhachSan = new DataTable();
-            //try
-            //{
-            //    if (rdGiaCa.Checked) //Kiểm tra Radio giá cả có đc chọn ko 
-            //    {
-            //        dsKhachSan = KHACHSAN_DAO.TimKiemKS(1, tbThanhPho.Text);
-            //    }
-            //    else if (rdHangSao.Checked)//Kiểm tra Radio hạng sao có đc chọn ko 
-            //    {
-            //        dsKhachSan = KHACHSAN_DAO.TimKiemKS(2, tbThanhPho.Text);
-            //    }
-            //    else if (!rdGiaCa.Checked && !rdHangSao.Checked)// KT ko nút nào đc chọn?
-            //    {
-            //        dsKhachSan = KHACHSAN_DAO.TimKiemKS(0, tbThanhPho.Text);
-            //    }
-            //    dataGridView1.DataSource = dsKhachSan;
-            //    SetBackColorDataGirdView();
-            //}
-            //catch (SqlException ex)
-            //{
-            //    MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
-
-
+            BUSGiaoVien bus = new BUSGiaoVien();
+            try
+            {
+                dataGridView1.DataSource = bus.getKetQua(namhoc, hocky);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         

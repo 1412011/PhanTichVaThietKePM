@@ -26,7 +26,8 @@ namespace GUI
 
         private void barButtonItem16_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            frmBangDiem bd = new frmBangDiem();
+            bd.Show();
         }
 
         private void barButtonItem19_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -71,6 +72,12 @@ namespace GUI
         private void frmMain_Load(object sender, EventArgs e)
         {
             SkinHelper.InitSkinPopupMenu(barLinkContainerItem1);
+        }
+
+        private void barButtonItem18_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmTKB tkb = new frmTKB();
+            tkb.Show();
         }
     }
 }

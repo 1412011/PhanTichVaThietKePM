@@ -50,5 +50,23 @@ namespace DAO
 
             return ccf.getDatatable(sql);
         }
+
+        public DataTable getKetQua(string namhoc, string hocky)
+        {
+            String sql = "select*";
+            if (string.IsNullOrEmpty(namhoc) && string.IsNullOrEmpty(hocky))
+            {
+                return new DataTable();
+            }
+            else if (!string.IsNullOrEmpty(hocky))
+            {
+                sql += $" from KETQUAHOCKY where hocKy = {hocky}";
+            }
+            else if (!string.IsNullOrEmpty(namhoc))
+            {
+                sql += $" from KETQUANAMHOC";
+            }
+            return ccf.getDatatable(sql);
+        }
     }
 }

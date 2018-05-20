@@ -51,5 +51,10 @@ namespace BUS
         {
             return dao_GiaoVien.get_all_full_info();
         }
+
+        public DataTable getKetQua(string namhoc, string hocky)
+        {
+            return dao_GiaoVien.getKetQua();
+        }
     }
 }

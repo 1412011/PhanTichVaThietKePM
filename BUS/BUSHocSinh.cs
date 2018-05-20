@@ -28,5 +28,9 @@ namespace BUS
         {
             return dao_HocSinh.get_all();
         }
+        public DataTable getTKB(string lop)
+        {
+            return dao_HocSinh.getTKB(lop);
+        }
     }
 }
