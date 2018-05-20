@@ -39,6 +39,13 @@ namespace DAO
                 "VALUES(N'{0}',N'{1}','{2}', '{3}', {4}, '{5}', '{6}', '{7}')", e.tenNguoiDung,e.gioiTinh,e.ngaySinh,e.sDT,e.diaChi,e.email,e.taiKhoan,e.matKhau);
             return ccf.excuteNonQuery(sql);
         }
+
+        public DataTable DangNhap(string text1, string text2)
+        {
+            String sqlText = $"select * from NGUOIDUNG where taiKhoan = '{text1}' and matKhau = '{text2}'";
+            return ccf.getDatatable(sqlText);
+        }
+
         public DataTable get_unique_last()
         {
             String sql = String.Format("SELECT TOP 1 * FROM NGUOIDUNG ORDER BY maNguoiDung DESC");

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAO;
+using BUS;
 
 namespace GUI
 {
@@ -28,6 +30,8 @@ namespace GUI
         private void KiemTraDangNhap()
         {
             int kq = 0;
+            BUSNguoiDung bus = new BUSNguoiDung();
+            frmMain main = new frmMain();
             //Kt thông tin không được để trống
             if (tbTenDangNhap.Text.Length == 0 || tbMatKhau.Text.Length == 0)
             {
@@ -37,18 +41,17 @@ namespace GUI
             //Kt người đăng nhập là admin hay là khách hàng
             if (KTAdmin())
             {
-                MainForm.KT_DangNhap = 2;    //Biến KTDangNhap đc bật lên 2. Admin đã đăng nhập               
+                kq = 2;
+                main.Show();
                 this.Hide();
             }
             else
             {
-                kq = KHACHHANG_DAO.DangNhap(tbTenDangNhap.Text, tbMatKhau.Text);//Nhận kq trả về để kt ĐN thành công hay ko
+                kq = bus.dangnhap(tbTenDangNhap.Text, tbMatKhau.Text);//Nhận kq trả về để kt ĐN thành công hay ko
 
                 if (kq == 1)//Kq đn thành công
                 {
-                    MainForm.KT_DangNhap = 1;//Biến KTDangNhap đc bật lên 1. KH đã đăng nhập
-                    MainForm.TenKH = KHACHHANG_DAO.TimTenKH(tbTenDangNhap.Text);
-                    DatPhong.MaKH = KHACHHANG_DAO.TimMaKH(tbTenDangNhap.Text);
+                    main.Show();
                     this.Hide();
                 }
                 else
@@ -72,6 +75,12 @@ namespace GUI
         private void btDangNhap_Click(object sender, EventArgs e)
         {
             KiemTraDangNhap();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmDangKy DangKi = new frmDangKy();
+            DangKi.Show();
         }
     }
 }

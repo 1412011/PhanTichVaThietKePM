@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DN));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbTenDangNhap = new System.Windows.Forms.TextBox();
             this.tbMatKhau = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btDangNhap = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,21 +60,20 @@
             // 
             this.tbTenDangNhap.Location = new System.Drawing.Point(200, 30);
             this.tbTenDangNhap.Name = "tbTenDangNhap";
-            this.tbTenDangNhap.Size = new System.Drawing.Size(131, 20);
+            this.tbTenDangNhap.Size = new System.Drawing.Size(155, 20);
             this.tbTenDangNhap.TabIndex = 2;
             // 
             // tbMatKhau
             // 
             this.tbMatKhau.Location = new System.Drawing.Point(200, 58);
             this.tbMatKhau.Name = "tbMatKhau";
-            this.tbMatKhau.Size = new System.Drawing.Size(131, 20);
+            this.tbMatKhau.Size = new System.Drawing.Size(155, 20);
             this.tbMatKhau.TabIndex = 3;
             this.tbMatKhau.UseSystemPasswordChar = true;
             this.tbMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbMatKhau_KeyDown);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(6, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 99);
@@ -84,7 +83,7 @@
             // 
             // btDangNhap
             // 
-            this.btDangNhap.Location = new System.Drawing.Point(256, 103);
+            this.btDangNhap.Location = new System.Drawing.Point(281, 104);
             this.btDangNhap.Name = "btDangNhap";
             this.btDangNhap.Size = new System.Drawing.Size(74, 22);
             this.btDangNhap.TabIndex = 5;
@@ -92,18 +91,29 @@
             this.btDangNhap.UseVisualStyleBackColor = true;
             this.btDangNhap.Click += new System.EventHandler(this.btDangNhap_Click);
             // 
-            // DN
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(200, 103);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Đăng Ký";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(418, 134);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btDangNhap);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tbMatKhau);
             this.Controls.Add(this.tbTenDangNhap);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "DN";
+            this.Name = "frmDangNhap";
             this.Text = "Đăng nhập";
             this.Load += new System.EventHandler(this.DN_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -120,5 +130,6 @@
         private System.Windows.Forms.TextBox tbMatKhau;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btDangNhap;
+        private System.Windows.Forms.Button button1;
     }
 }

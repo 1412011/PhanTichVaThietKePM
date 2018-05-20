@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKi));
             this.lbHoTen = new System.Windows.Forms.Label();
             this.lbTenDN = new System.Windows.Forms.Label();
             this.lbMatKhau = new System.Windows.Forms.Label();
@@ -49,8 +48,6 @@
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.btDangKi = new System.Windows.Forms.Button();
             this.btThoat = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbHoTen
@@ -228,22 +225,11 @@
             this.btThoat.UseVisualStyleBackColor = true;
             this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(310, 38);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(135, 139);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            // 
-            // DangKi
+            // frmDangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 458);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btThoat);
             this.Controls.Add(this.btDangKi);
             this.Controls.Add(this.tbEmail);
@@ -264,9 +250,8 @@
             this.Controls.Add(this.lbMatKhau);
             this.Controls.Add(this.lbTenDN);
             this.Controls.Add(this.lbHoTen);
-            this.Name = "DangKi";
+            this.Name = "frmDangKy";
             this.Text = "DangKi";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,6 +279,5 @@
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Button btDangKi;
         private System.Windows.Forms.Button btThoat;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
