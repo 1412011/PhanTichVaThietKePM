@@ -21,7 +21,7 @@ namespace GUI
 
         private void barButtonItem15_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            _OpenForm_New(new frmKhoiLop());
         }
 
         private void barButtonItem16_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -83,6 +83,26 @@ namespace GUI
                 f.MdiParent = this;
                 f.Show();
             }
+        }
+
+        private void barButtonItemHanhKiem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            _OpenForm_New(new frmHanhKiem());
+        }
+
+        private void barButtonItemHocLuc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            _OpenForm_New(new frmHocLuc());
+        }
+
+        private void barButtonItemHocKy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            _OpenForm_New(new HocKy());
+        }
+
+        private void barButtonItemQuiDinh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            _OpenForm_New(new frmQuyDinh());
         }
     }
 }

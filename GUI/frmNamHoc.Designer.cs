@@ -86,7 +86,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(367, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(353, 25);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -213,11 +213,10 @@
             // gridControlNamHoc
             // 
             this.gridControlNamHoc.DataSource = this.nAMHOCBindingSource;
-            this.gridControlNamHoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlNamHoc.Location = new System.Drawing.Point(0, 25);
+            this.gridControlNamHoc.Location = new System.Drawing.Point(0, 28);
             this.gridControlNamHoc.MainView = this.gridViewNamHoc;
             this.gridControlNamHoc.Name = "gridControlNamHoc";
-            this.gridControlNamHoc.Size = new System.Drawing.Size(367, 294);
+            this.gridControlNamHoc.Size = new System.Drawing.Size(307, 291);
             this.gridControlNamHoc.TabIndex = 1;
             this.gridControlNamHoc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewNamHoc});
@@ -256,7 +255,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 319);
+            this.ClientSize = new System.Drawing.Size(353, 373);
             this.Controls.Add(this.gridControlNamHoc);
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "frmNamHoc";

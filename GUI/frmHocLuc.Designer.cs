@@ -88,7 +88,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(473, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(411, 25);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -214,11 +214,10 @@
             // gridControl1
             // 
             this.gridControl1.DataSource = this.hOCLUCBindingSource;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 25);
+            this.gridControl1.Location = new System.Drawing.Point(0, 28);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(473, 359);
+            this.gridControl1.Size = new System.Drawing.Size(333, 298);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -266,7 +265,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 384);
+            this.ClientSize = new System.Drawing.Size(411, 384);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "frmHocLuc";

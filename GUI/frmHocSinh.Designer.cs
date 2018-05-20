@@ -31,14 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHocSinh));
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
-            this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarGroupControlContainer1 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btntimkiemhs = new DevExpress.XtraEditors.SimpleButton();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.navBarGroupControlContainer2 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtnoisinh = new System.Windows.Forms.ComboBox();
             this.btnNullEmpty = new DevExpress.XtraEditors.SimpleButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -100,11 +95,8 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtnoisinh = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.navBarControl1.SuspendLayout();
-            this.navBarGroupControlContainer1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.navBarGroupControlContainer2.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -131,78 +123,20 @@
             // 
             // navBarControl1
             // 
-            this.navBarControl1.ActiveGroup = this.navBarGroup1;
+            this.navBarControl1.ActiveGroup = this.navBarGroup2;
             this.navBarControl1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.navBarControl1.Controls.Add(this.navBarGroupControlContainer1);
             this.navBarControl1.Controls.Add(this.navBarGroupControlContainer2);
             this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
-            this.navBarGroup2,
-            this.navBarGroup1});
+            this.navBarGroup2});
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 232;
+            this.navBarControl1.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
             this.navBarControl1.Size = new System.Drawing.Size(232, 559);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
             this.navBarControl1.Click += new System.EventHandler(this.navBarControl1_Click);
-            // 
-            // navBarGroup1
-            // 
-            this.navBarGroup1.Caption = "Tìm Kiếm";
-            this.navBarGroup1.ControlContainer = this.navBarGroupControlContainer1;
-            this.navBarGroup1.Expanded = true;
-            this.navBarGroup1.GroupClientHeight = 156;
-            this.navBarGroup1.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer;
-            this.navBarGroup1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup1.ImageOptions.LargeImage")));
-            this.navBarGroup1.Name = "navBarGroup1";
-            // 
-            // navBarGroupControlContainer1
-            // 
-            this.navBarGroupControlContainer1.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.navBarGroupControlContainer1.Appearance.Options.UseBackColor = true;
-            this.navBarGroupControlContainer1.Controls.Add(this.panel1);
-            this.navBarGroupControlContainer1.Name = "navBarGroupControlContainer1";
-            this.navBarGroupControlContainer1.Size = new System.Drawing.Size(224, 152);
-            this.navBarGroupControlContainer1.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.btntimkiemhs);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(224, 152);
-            this.panel1.TabIndex = 0;
-            // 
-            // btntimkiemhs
-            // 
-            this.btntimkiemhs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btntimkiemhs.ImageOptions.Image")));
-            this.btntimkiemhs.Location = new System.Drawing.Point(48, 71);
-            this.btntimkiemhs.Name = "btntimkiemhs";
-            this.btntimkiemhs.Size = new System.Drawing.Size(91, 35);
-            this.btntimkiemhs.TabIndex = 3;
-            this.btntimkiemhs.Text = "Tìm kiếm";
-            this.btntimkiemhs.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(8, 32);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(175, 21);
-            this.textBox6.TabIndex = 1;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 16);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(115, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Nhập thông tin cần tìm";
             // 
             // navBarGroupControlContainer2
             // 
@@ -210,7 +144,7 @@
             this.navBarGroupControlContainer2.Appearance.Options.UseBackColor = true;
             this.navBarGroupControlContainer2.Controls.Add(this.panel2);
             this.navBarGroupControlContainer2.Name = "navBarGroupControlContainer2";
-            this.navBarGroupControlContainer2.Size = new System.Drawing.Size(224, 367);
+            this.navBarGroupControlContainer2.Size = new System.Drawing.Size(232, 438);
             this.navBarGroupControlContainer2.TabIndex = 1;
             // 
             // panel2
@@ -240,8 +174,82 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
-            this.panel2.Size = new System.Drawing.Size(224, 367);
+            this.panel2.Size = new System.Drawing.Size(232, 438);
             this.panel2.TabIndex = 0;
+            // 
+            // txtnoisinh
+            // 
+            this.txtnoisinh.Enabled = false;
+            this.txtnoisinh.FormattingEnabled = true;
+            this.txtnoisinh.Items.AddRange(new object[] {
+            "An Giang",
+            "Bà Rịa - Vũng Tàu",
+            "Bắc Giang",
+            "Bắc Kạn",
+            "Bạc Liêu",
+            "Bắc Ninh",
+            "Bến Tre",
+            "Bình Định",
+            "Bình Dương",
+            "Bình Phước",
+            "Bình Thuận",
+            "Cà Mau",
+            "Cao Bằng",
+            "Đắk Lắk",
+            "Đắk Nông",
+            "Điện Biên",
+            "Đồng Nai",
+            "Đồng Tháp",
+            "Gia Lai",
+            "Hà Giang",
+            "Hà Nam",
+            "Hà Tĩnh",
+            "Hải Dương",
+            "Hậu Giang",
+            "Hòa Bình",
+            "Hưng Yên",
+            "Hà Nội",
+            "Khánh Hòa",
+            "Kiên Giang",
+            "Kon Tum",
+            "Lai Châu",
+            "Lâm Đồng",
+            "Lạng Sơn",
+            "Lào Cai",
+            "Long An",
+            "Nam Định",
+            "Nghệ An",
+            "Ninh Bình",
+            "Ninh Thuận",
+            "Phú Thọ",
+            "Quảng Bình",
+            "Quảng Nam",
+            "Quảng Ngãi",
+            "Quảng Ninh",
+            "Quảng Trị",
+            "Sóc Trăng",
+            "Sơn La",
+            "Tây Ninh",
+            "Thái Bình",
+            "Thái Nguyên",
+            "Thanh Hóa",
+            "Thừa Thiên Huế",
+            "Tiền Giang",
+            "Trà Vinh",
+            "Tuyên Quang",
+            "Vĩnh Long",
+            "Vĩnh Phúc",
+            "Yên Bái",
+            "Phú Yên",
+            "Cần Thơ",
+            "Đà Nẵng",
+            "Hải Phòng",
+            "Hà Nội",
+            "TP HCM"});
+            this.txtnoisinh.Location = new System.Drawing.Point(8, 243);
+            this.txtnoisinh.Name = "txtnoisinh";
+            this.txtnoisinh.Size = new System.Drawing.Size(165, 21);
+            this.txtnoisinh.TabIndex = 5;
             // 
             // btnNullEmpty
             // 
@@ -838,80 +846,6 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
-            // txtnoisinh
-            // 
-            this.txtnoisinh.Enabled = false;
-            this.txtnoisinh.FormattingEnabled = true;
-            this.txtnoisinh.Items.AddRange(new object[] {
-            "An Giang",
-            "Bà Rịa - Vũng Tàu",
-            "Bắc Giang",
-            "Bắc Kạn",
-            "Bạc Liêu",
-            "Bắc Ninh",
-            "Bến Tre",
-            "Bình Định",
-            "Bình Dương",
-            "Bình Phước",
-            "Bình Thuận",
-            "Cà Mau",
-            "Cao Bằng",
-            "Đắk Lắk",
-            "Đắk Nông",
-            "Điện Biên",
-            "Đồng Nai",
-            "Đồng Tháp",
-            "Gia Lai",
-            "Hà Giang",
-            "Hà Nam",
-            "Hà Tĩnh",
-            "Hải Dương",
-            "Hậu Giang",
-            "Hòa Bình",
-            "Hưng Yên",
-            "Hà Nội",
-            "Khánh Hòa",
-            "Kiên Giang",
-            "Kon Tum",
-            "Lai Châu",
-            "Lâm Đồng",
-            "Lạng Sơn",
-            "Lào Cai",
-            "Long An",
-            "Nam Định",
-            "Nghệ An",
-            "Ninh Bình",
-            "Ninh Thuận",
-            "Phú Thọ",
-            "Quảng Bình",
-            "Quảng Nam",
-            "Quảng Ngãi",
-            "Quảng Ninh",
-            "Quảng Trị",
-            "Sóc Trăng",
-            "Sơn La",
-            "Tây Ninh",
-            "Thái Bình",
-            "Thái Nguyên",
-            "Thanh Hóa",
-            "Thừa Thiên Huế",
-            "Tiền Giang",
-            "Trà Vinh",
-            "Tuyên Quang",
-            "Vĩnh Long",
-            "Vĩnh Phúc",
-            "Yên Bái",
-            "Phú Yên",
-            "Cần Thơ",
-            "Đà Nẵng",
-            "Hải Phòng",
-            "Hà Nội",
-            "TP HCM"});
-            this.txtnoisinh.Location = new System.Drawing.Point(8, 243);
-            this.txtnoisinh.Name = "txtnoisinh";
-            this.txtnoisinh.Size = new System.Drawing.Size(165, 21);
-            this.txtnoisinh.TabIndex = 5;
-            // 
             // frmHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -924,9 +858,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             this.navBarControl1.ResumeLayout(false);
-            this.navBarGroupControlContainer1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.navBarGroupControlContainer2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -961,17 +892,11 @@
         #endregion
 
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
-        private DevExpress.XtraNavBar.NavBarGroupControlContainer navBarGroupControlContainer1;
         private DevExpress.XtraNavBar.NavBarGroupControlContainer navBarGroupControlContainer2;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txthotencha;
-        private System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraEditors.SimpleButton btntimkiemhs;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtnghenghiepme;

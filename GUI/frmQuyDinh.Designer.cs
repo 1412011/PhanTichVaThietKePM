@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmHanhKiem
+    partial class frmQuyDinh
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHanhKiem));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuyDinh));
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.hANHKIEMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qUYDINHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qUANLYHOCSINHDataSet = new GUI.QUANLYHOCSINHDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -48,11 +48,15 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.coltenHanhKiem = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.hANHKIEMTableAdapter = new GUI.QUANLYHOCSINHDataSetTableAdapters.HANHKIEMTableAdapter();
+            this.colmaQuyDinh = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coltenQuyDinh = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colkieu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colgiaTri = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coltinhTrang = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.qUYDINHTableAdapter = new GUI.QUANLYHOCSINHDataSetTableAdapters.QUYDINHTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hANHKIEMBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qUYDINHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -61,7 +65,7 @@
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.BindingSource = this.hANHKIEMBindingSource;
+            this.bindingNavigator1.BindingSource = this.qUYDINHBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -85,7 +89,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(334, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(585, 25);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -98,10 +102,10 @@
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
-            // hANHKIEMBindingSource
+            // qUYDINHBindingSource
             // 
-            this.hANHKIEMBindingSource.DataMember = "HANHKIEM";
-            this.hANHKIEMBindingSource.DataSource = this.qUANLYHOCSINHDataSet;
+            this.qUYDINHBindingSource.DataMember = "QUYDINH";
+            this.qUYDINHBindingSource.DataSource = this.qUANLYHOCSINHDataSet;
             // 
             // qUANLYHOCSINHDataSet
             // 
@@ -206,11 +210,11 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.hANHKIEMBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(0, 31);
+            this.gridControl1.DataSource = this.qUYDINHBindingSource;
+            this.gridControl1.Location = new System.Drawing.Point(0, 28);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(300, 283);
+            this.gridControl1.Size = new System.Drawing.Size(498, 328);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -218,38 +222,75 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.coltenHanhKiem});
+            this.colmaQuyDinh,
+            this.coltenQuyDinh,
+            this.colkieu,
+            this.colgiaTri,
+            this.coltinhTrang});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // coltenHanhKiem
+            // colmaQuyDinh
             // 
-            this.coltenHanhKiem.Caption = "Tên hạnh kiểm";
-            this.coltenHanhKiem.FieldName = "tenHanhKiem";
-            this.coltenHanhKiem.Name = "coltenHanhKiem";
-            this.coltenHanhKiem.Visible = true;
-            this.coltenHanhKiem.VisibleIndex = 0;
+            this.colmaQuyDinh.Caption = "Mã qui định";
+            this.colmaQuyDinh.FieldName = "maQuyDinh";
+            this.colmaQuyDinh.Name = "colmaQuyDinh";
+            this.colmaQuyDinh.OptionsColumn.ReadOnly = true;
+            this.colmaQuyDinh.Visible = true;
+            this.colmaQuyDinh.VisibleIndex = 0;
             // 
-            // hANHKIEMTableAdapter
+            // coltenQuyDinh
             // 
-            this.hANHKIEMTableAdapter.ClearBeforeFill = true;
+            this.coltenQuyDinh.Caption = "Tên qui định";
+            this.coltenQuyDinh.FieldName = "tenQuyDinh";
+            this.coltenQuyDinh.Name = "coltenQuyDinh";
+            this.coltenQuyDinh.Visible = true;
+            this.coltenQuyDinh.VisibleIndex = 1;
             // 
-            // frmHanhKiem
+            // colkieu
+            // 
+            this.colkieu.Caption = "Kiểu";
+            this.colkieu.FieldName = "kieu";
+            this.colkieu.Name = "colkieu";
+            this.colkieu.Visible = true;
+            this.colkieu.VisibleIndex = 2;
+            // 
+            // colgiaTri
+            // 
+            this.colgiaTri.Caption = "Giá trị";
+            this.colgiaTri.FieldName = "giaTri";
+            this.colgiaTri.Name = "colgiaTri";
+            this.colgiaTri.Visible = true;
+            this.colgiaTri.VisibleIndex = 3;
+            // 
+            // coltinhTrang
+            // 
+            this.coltinhTrang.Caption = "Tình trạng";
+            this.coltinhTrang.FieldName = "tinhTrang";
+            this.coltinhTrang.Name = "coltinhTrang";
+            this.coltinhTrang.Visible = true;
+            this.coltinhTrang.VisibleIndex = 4;
+            // 
+            // qUYDINHTableAdapter
+            // 
+            this.qUYDINHTableAdapter.ClearBeforeFill = true;
+            // 
+            // frmQuyDinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 359);
+            this.ClientSize = new System.Drawing.Size(585, 421);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.bindingNavigator1);
-            this.Name = "frmHanhKiem";
-            this.Text = "frmHanhKiem";
-            this.Load += new System.EventHandler(this.frmHanhKiem_Load);
+            this.Name = "frmQuyDinh";
+            this.Text = "frmQuyDinh";
+            this.Load += new System.EventHandler(this.frmQuyDinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hANHKIEMBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qUYDINHBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -272,13 +313,17 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private QUANLYHOCSINHDataSet qUANLYHOCSINHDataSet;
-        private System.Windows.Forms.BindingSource hANHKIEMBindingSource;
-        private QUANLYHOCSINHDataSetTableAdapters.HANHKIEMTableAdapter hANHKIEMTableAdapter;
-        private DevExpress.XtraGrid.Columns.GridColumn coltenHanhKiem;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.BindingSource qUYDINHBindingSource;
+        private QUANLYHOCSINHDataSetTableAdapters.QUYDINHTableAdapter qUYDINHTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colmaQuyDinh;
+        private DevExpress.XtraGrid.Columns.GridColumn coltenQuyDinh;
+        private DevExpress.XtraGrid.Columns.GridColumn colkieu;
+        private DevExpress.XtraGrid.Columns.GridColumn colgiaTri;
+        private DevExpress.XtraGrid.Columns.GridColumn coltinhTrang;
     }
 }
