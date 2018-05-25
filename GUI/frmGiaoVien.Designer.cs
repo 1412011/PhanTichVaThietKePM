@@ -67,6 +67,7 @@
             this.txtNgaySinh = new DevExpress.XtraEditors.DateEdit();
             this.cbTinh = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cbBomon = new DevExpress.XtraEditors.LookUpEdit();
+            this.bOMONBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtSonha = new DevExpress.XtraEditors.TextEdit();
             this.navBarGroupControlContainer2 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -75,8 +76,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.qUANLYHOCSINHDataSet = new GUI.QUANLYHOCSINHDataSet();
-            this.bOMONTableAdapter = new GUI.QUANLYHOCSINHDataSetTableAdapters.BOMONTableAdapter();
             this.repositoryItemDateEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.gridControlGV = new DevExpress.XtraGrid.GridControl();
@@ -144,11 +143,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNgaySinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbTinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbBomon.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bOMONBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSonha.Properties)).BeginInit();
             this.navBarGroupControlContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -600,12 +599,17 @@
             this.cbBomon.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("maBoMon", "Mã bộ môn", 100, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("tenMonHoc", "Tên bộ môn", 150, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.cbBomon.Properties.DataSource = this.bOMONBindingSource;
             this.cbBomon.Properties.DisplayMember = "tenMonHoc";
             this.cbBomon.Properties.NullText = "";
             this.cbBomon.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbBomon.Properties.ValueMember = "maBoMon";
             this.cbBomon.Size = new System.Drawing.Size(204, 20);
             this.cbBomon.TabIndex = 3;
+            // 
+            // bOMONBindingSource
+            // 
+            this.bOMONBindingSource.DataMember = "BOMON";
             // 
             // txtSonha
             // 
@@ -673,15 +677,6 @@
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 3;
-            // 
-            // qUANLYHOCSINHDataSet
-            // 
-            this.qUANLYHOCSINHDataSet.DataSetName = "QUANLYHOCSINHDataSet";
-            this.qUANLYHOCSINHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bOMONTableAdapter
-            // 
-            this.bOMONTableAdapter.ClearBeforeFill = true;
             // 
             // repositoryItemDateEdit1
             // 
@@ -1172,12 +1167,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNgaySinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbTinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbBomon.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bOMONBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSonha.Properties)).EndInit();
             this.navBarGroupControlContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -1295,5 +1290,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ErrorProvider errorProvidergv;
+        private QUANLYHOCSINHDataSet qUANLYHOCSINHDataSet1;
+        private System.Windows.Forms.BindingSource bOMONBindingSource;
+        private QUANLYHOCSINHDataSetTableAdapters.BOMONTableAdapter bOMONTableAdapter1;
     }
 }

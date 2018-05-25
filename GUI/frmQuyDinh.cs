@@ -20,8 +20,9 @@ namespace GUI
 
         private void frmQuyDinh_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qUANLYHOCSINHDataSet.QUYDINH' table. You can move, or remove it, as needed.
-            this.qUYDINHTableAdapter.Fill(this.qUANLYHOCSINHDataSet.QUYDINH);
+            // TODO: This line of code loads data into the 'qUANLYHOCSINHDataSet1.QUYDINH' table. You can move, or remove it, as needed.
+            this.qUYDINHTableAdapter1.Fill(this.qUANLYHOCSINHDataSet1.QUYDINH);
+
 
         }
 
@@ -31,7 +32,7 @@ namespace GUI
             {
                 this.Validate();
                 this.qUYDINHBindingSource.EndEdit();
-                this.qUYDINHTableAdapter.Update(qUANLYHOCSINHDataSet.QUYDINH);
+                this.qUYDINHTableAdapter1.Update(qUANLYHOCSINHDataSet1.QUYDINH);
                 MessageBox.Show("Lưu thành công !!!", "Thành công", MessageBoxButtons.OK);
             }
             catch (Exception ex)

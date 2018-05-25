@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBoMon));
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bOMONBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qUANLYHOCSINHDataSet = new GUI.QUANLYHOCSINHDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -53,19 +51,21 @@
             this.colsoTietHoc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colheSoMon = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coltruongBoMon = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.bOMONTableAdapter = new GUI.QUANLYHOCSINHDataSetTableAdapters.BOMONTableAdapter();
+            this.qUANLYHOCSINHDataSet1 = new GUI.QUANLYHOCSINHDataSet();
+            this.bOMONBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bOMONTableAdapter1 = new GUI.QUANLYHOCSINHDataSetTableAdapters.BOMONTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bOMONBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlBoMon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewBoMon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bOMONBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.BindingSource = this.bOMONBindingSource;
+            this.bindingNavigator1.BindingSource = this.bOMONBindingSource1;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -89,7 +89,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(460, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(493, 25);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -102,16 +102,6 @@
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             this.bindingNavigatorAddNewItem.ToolTipText = "Thêm";
-            // 
-            // bOMONBindingSource
-            // 
-            this.bOMONBindingSource.DataMember = "BOMON";
-            this.bOMONBindingSource.DataSource = this.qUANLYHOCSINHDataSet;
-            // 
-            // qUANLYHOCSINHDataSet
-            // 
-            this.qUANLYHOCSINHDataSet.DataSetName = "QUANLYHOCSINHDataSet";
-            this.qUANLYHOCSINHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -215,7 +205,7 @@
             // 
             // gridControlBoMon
             // 
-            this.gridControlBoMon.DataSource = this.bOMONBindingSource;
+            this.gridControlBoMon.DataSource = this.bOMONBindingSource1;
             this.gridControlBoMon.Location = new System.Drawing.Point(0, 41);
             this.gridControlBoMon.MainView = this.gridViewBoMon;
             this.gridControlBoMon.Name = "gridControlBoMon";
@@ -278,15 +268,25 @@
             this.coltruongBoMon.Visible = true;
             this.coltruongBoMon.VisibleIndex = 4;
             // 
-            // bOMONTableAdapter
+            // qUANLYHOCSINHDataSet1
             // 
-            this.bOMONTableAdapter.ClearBeforeFill = true;
+            this.qUANLYHOCSINHDataSet1.DataSetName = "QUANLYHOCSINHDataSet";
+            this.qUANLYHOCSINHDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bOMONBindingSource1
+            // 
+            this.bOMONBindingSource1.DataMember = "BOMON";
+            this.bOMONBindingSource1.DataSource = this.qUANLYHOCSINHDataSet1;
+            // 
+            // bOMONTableAdapter1
+            // 
+            this.bOMONTableAdapter1.ClearBeforeFill = true;
             // 
             // frmBoMon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 433);
+            this.ClientSize = new System.Drawing.Size(493, 460);
             this.Controls.Add(this.gridControlBoMon);
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "frmBoMon";
@@ -295,10 +295,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bOMONBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlBoMon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewBoMon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bOMONBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,7 +321,6 @@
         private DevExpress.XtraGrid.GridControl gridControlBoMon;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewBoMon;
         private QUANLYHOCSINHDataSet qUANLYHOCSINHDataSet;
-        private System.Windows.Forms.BindingSource bOMONBindingSource;
         private QUANLYHOCSINHDataSetTableAdapters.BOMONTableAdapter bOMONTableAdapter;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private DevExpress.XtraGrid.Columns.GridColumn colmaBoMon;
@@ -330,5 +329,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colheSoMon;
         private DevExpress.XtraGrid.Columns.GridColumn coltruongBoMon;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private QUANLYHOCSINHDataSet qUANLYHOCSINHDataSet1;
+        private System.Windows.Forms.BindingSource bOMONBindingSource1;
+        private QUANLYHOCSINHDataSetTableAdapters.BOMONTableAdapter bOMONTableAdapter1;
     }
 }

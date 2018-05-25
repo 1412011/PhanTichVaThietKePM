@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNamHoc));
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.nAMHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qUANLYHOCSINHDataSet = new GUI.QUANLYHOCSINHDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -50,13 +48,15 @@
             this.gridViewNamHoc = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.coltenNamHoc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colmoTa = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.nAMHOCTableAdapter = new GUI.QUANLYHOCSINHDataSetTableAdapters.NAMHOCTableAdapter();
+            this.qUANLYHOCSINHDataSet1 = new GUI.QUANLYHOCSINHDataSet();
+            this.nAMHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nAMHOCTableAdapter1 = new GUI.QUANLYHOCSINHDataSetTableAdapters.NAMHOCTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nAMHOCBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlNamHoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewNamHoc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nAMHOCBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator1
@@ -99,16 +99,6 @@
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             this.bindingNavigatorAddNewItem.ToolTipText = "Thêm";
-            // 
-            // nAMHOCBindingSource
-            // 
-            this.nAMHOCBindingSource.DataMember = "NAMHOC";
-            this.nAMHOCBindingSource.DataSource = this.qUANLYHOCSINHDataSet;
-            // 
-            // qUANLYHOCSINHDataSet
-            // 
-            this.qUANLYHOCSINHDataSet.DataSetName = "QUANLYHOCSINHDataSet";
-            this.qUANLYHOCSINHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -247,9 +237,19 @@
             this.colmoTa.Visible = true;
             this.colmoTa.VisibleIndex = 1;
             // 
-            // nAMHOCTableAdapter
+            // qUANLYHOCSINHDataSet1
             // 
-            this.nAMHOCTableAdapter.ClearBeforeFill = true;
+            this.qUANLYHOCSINHDataSet1.DataSetName = "QUANLYHOCSINHDataSet";
+            this.qUANLYHOCSINHDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nAMHOCBindingSource
+            // 
+            this.nAMHOCBindingSource.DataMember = "NAMHOC";
+            this.nAMHOCBindingSource.DataSource = this.qUANLYHOCSINHDataSet1;
+            // 
+            // nAMHOCTableAdapter1
+            // 
+            this.nAMHOCTableAdapter1.ClearBeforeFill = true;
             // 
             // frmNamHoc
             // 
@@ -264,10 +264,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nAMHOCBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlNamHoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewNamHoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nAMHOCBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,11 +290,13 @@
         private DevExpress.XtraGrid.GridControl gridControlNamHoc;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewNamHoc;
         private QUANLYHOCSINHDataSet qUANLYHOCSINHDataSet;
-        private System.Windows.Forms.BindingSource nAMHOCBindingSource;
         private QUANLYHOCSINHDataSetTableAdapters.NAMHOCTableAdapter nAMHOCTableAdapter;
         private DevExpress.XtraGrid.Columns.GridColumn coltenNamHoc;
         private DevExpress.XtraGrid.Columns.GridColumn colmoTa;
         private System.Windows.Forms.ToolStripButton toolStripButtonLuu;
         private System.Windows.Forms.ToolStripButton toolStripButtonNapLai;
+        private QUANLYHOCSINHDataSet qUANLYHOCSINHDataSet1;
+        private System.Windows.Forms.BindingSource nAMHOCBindingSource;
+        private QUANLYHOCSINHDataSetTableAdapters.NAMHOCTableAdapter nAMHOCTableAdapter1;
     }
 }

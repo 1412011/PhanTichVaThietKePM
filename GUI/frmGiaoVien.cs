@@ -46,8 +46,9 @@ namespace GUI
 
         private void frmGiaoVien_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qUANLYHOCSINHDataSet.BOMON' table. You can move, or remove it, as needed.
-            this.bOMONTableAdapter.Fill(this.qUANLYHOCSINHDataSet.BOMON);
+            // TODO: This line of code loads data into the 'qUANLYHOCSINHDataSet1.BOMON' table. You can move, or remove it, as needed.
+            this.bOMONTableAdapter1.Fill(this.qUANLYHOCSINHDataSet1.BOMON);
+
 
         }
 

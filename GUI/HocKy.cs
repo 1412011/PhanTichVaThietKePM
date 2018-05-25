@@ -20,8 +20,9 @@ namespace GUI
 
         private void HocKy_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qUANLYHOCSINHDataSet.HOCKY' table. You can move, or remove it, as needed.
-            this.hOCKYTableAdapter.Fill(this.qUANLYHOCSINHDataSet.HOCKY);
+            // TODO: This line of code loads data into the 'qUANLYHOCSINHDataSet1.HOCKY' table. You can move, or remove it, as needed.
+            this.hOCKYTableAdapter1.Fill(this.qUANLYHOCSINHDataSet1.HOCKY);
+
 
         }
 
@@ -31,7 +32,7 @@ namespace GUI
             {
                 this.Validate();
                 this.hOCKYBindingSource.EndEdit();
-                this.hOCKYTableAdapter.Update(qUANLYHOCSINHDataSet.HOCKY);
+                this.hOCKYTableAdapter1.Update(qUANLYHOCSINHDataSet1.HOCKY);
                 MessageBox.Show("Lưu thành công !!!", "Thành công", MessageBoxButtons.OK);
             }
             catch (Exception ex)

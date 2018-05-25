@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHocLuc));
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.hOCLUCBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qUANLYHOCSINHDataSet = new GUI.QUANLYHOCSINHDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -46,19 +44,21 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.hOCLUCTableAdapter = new GUI.QUANLYHOCSINHDataSetTableAdapters.HOCLUCTableAdapter();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.coltenHocLuc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coldiemCanTren = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coldiemCanDuoi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coldiemKhongChe = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.qUANLYHOCSINHDataSet1 = new GUI.QUANLYHOCSINHDataSet();
+            this.hOCLUCBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hOCLUCTableAdapter1 = new GUI.QUANLYHOCSINHDataSetTableAdapters.HOCLUCTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hOCLUCBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOCLUCBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator1
@@ -100,16 +100,6 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // hOCLUCBindingSource
-            // 
-            this.hOCLUCBindingSource.DataMember = "HOCLUC";
-            this.hOCLUCBindingSource.DataSource = this.qUANLYHOCSINHDataSet;
-            // 
-            // qUANLYHOCSINHDataSet
-            // 
-            this.qUANLYHOCSINHDataSet.DataSetName = "QUANLYHOCSINHDataSet";
-            this.qUANLYHOCSINHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -207,10 +197,6 @@
             this.toolStripButton2.Text = "toolStripButton2";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
-            // hOCLUCTableAdapter
-            // 
-            this.hOCLUCTableAdapter.ClearBeforeFill = true;
-            // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.hOCLUCBindingSource;
@@ -261,6 +247,20 @@
             this.coldiemKhongChe.Visible = true;
             this.coldiemKhongChe.VisibleIndex = 3;
             // 
+            // qUANLYHOCSINHDataSet1
+            // 
+            this.qUANLYHOCSINHDataSet1.DataSetName = "QUANLYHOCSINHDataSet";
+            this.qUANLYHOCSINHDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // hOCLUCBindingSource
+            // 
+            this.hOCLUCBindingSource.DataMember = "HOCLUC";
+            this.hOCLUCBindingSource.DataSource = this.qUANLYHOCSINHDataSet1;
+            // 
+            // hOCLUCTableAdapter1
+            // 
+            this.hOCLUCTableAdapter1.ClearBeforeFill = true;
+            // 
             // frmHocLuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,10 +274,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hOCLUCBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOCLUCBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,7 +300,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private QUANLYHOCSINHDataSet qUANLYHOCSINHDataSet;
-        private System.Windows.Forms.BindingSource hOCLUCBindingSource;
         private QUANLYHOCSINHDataSetTableAdapters.HOCLUCTableAdapter hOCLUCTableAdapter;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
@@ -308,5 +307,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn coldiemCanTren;
         private DevExpress.XtraGrid.Columns.GridColumn coldiemCanDuoi;
         private DevExpress.XtraGrid.Columns.GridColumn coldiemKhongChe;
+        private QUANLYHOCSINHDataSet qUANLYHOCSINHDataSet1;
+        private System.Windows.Forms.BindingSource hOCLUCBindingSource;
+        private QUANLYHOCSINHDataSetTableAdapters.HOCLUCTableAdapter hOCLUCTableAdapter1;
     }
 }

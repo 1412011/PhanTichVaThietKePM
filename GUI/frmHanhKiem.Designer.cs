@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHanhKiem));
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.hANHKIEMBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qUANLYHOCSINHDataSet = new GUI.QUANLYHOCSINHDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -49,13 +47,15 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.coltenHanhKiem = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.hANHKIEMTableAdapter = new GUI.QUANLYHOCSINHDataSetTableAdapters.HANHKIEMTableAdapter();
+            this.qUANLYHOCSINHDataSet1 = new GUI.QUANLYHOCSINHDataSet();
+            this.hANHKIEMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hANHKIEMTableAdapter1 = new GUI.QUANLYHOCSINHDataSetTableAdapters.HANHKIEMTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hANHKIEMBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hANHKIEMBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator1
@@ -97,16 +97,6 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // hANHKIEMBindingSource
-            // 
-            this.hANHKIEMBindingSource.DataMember = "HANHKIEM";
-            this.hANHKIEMBindingSource.DataSource = this.qUANLYHOCSINHDataSet;
-            // 
-            // qUANLYHOCSINHDataSet
-            // 
-            this.qUANLYHOCSINHDataSet.DataSetName = "QUANLYHOCSINHDataSet";
-            this.qUANLYHOCSINHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -232,9 +222,19 @@
             this.coltenHanhKiem.Visible = true;
             this.coltenHanhKiem.VisibleIndex = 0;
             // 
-            // hANHKIEMTableAdapter
+            // qUANLYHOCSINHDataSet1
             // 
-            this.hANHKIEMTableAdapter.ClearBeforeFill = true;
+            this.qUANLYHOCSINHDataSet1.DataSetName = "QUANLYHOCSINHDataSet";
+            this.qUANLYHOCSINHDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // hANHKIEMBindingSource
+            // 
+            this.hANHKIEMBindingSource.DataMember = "HANHKIEM";
+            this.hANHKIEMBindingSource.DataSource = this.qUANLYHOCSINHDataSet1;
+            // 
+            // hANHKIEMTableAdapter1
+            // 
+            this.hANHKIEMTableAdapter1.ClearBeforeFill = true;
             // 
             // frmHanhKiem
             // 
@@ -249,10 +249,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hANHKIEMBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hANHKIEMBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,10 +275,12 @@
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private QUANLYHOCSINHDataSet qUANLYHOCSINHDataSet;
-        private System.Windows.Forms.BindingSource hANHKIEMBindingSource;
         private QUANLYHOCSINHDataSetTableAdapters.HANHKIEMTableAdapter hANHKIEMTableAdapter;
         private DevExpress.XtraGrid.Columns.GridColumn coltenHanhKiem;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private QUANLYHOCSINHDataSet qUANLYHOCSINHDataSet1;
+        private System.Windows.Forms.BindingSource hANHKIEMBindingSource;
+        private QUANLYHOCSINHDataSetTableAdapters.HANHKIEMTableAdapter hANHKIEMTableAdapter1;
     }
 }

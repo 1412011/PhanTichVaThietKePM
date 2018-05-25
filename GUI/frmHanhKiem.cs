@@ -20,8 +20,8 @@ namespace GUI
 
         private void frmHanhKiem_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qUANLYHOCSINHDataSet.HANHKIEM' table. You can move, or remove it, as needed.
-            this.hANHKIEMTableAdapter.Fill(this.qUANLYHOCSINHDataSet.HANHKIEM);
+            // TODO: This line of code loads data into the 'qUANLYHOCSINHDataSet1.HANHKIEM' table. You can move, or remove it, as needed.
+            this.hANHKIEMTableAdapter1.Fill(this.qUANLYHOCSINHDataSet1.HANHKIEM);
 
         }
 
@@ -31,7 +31,7 @@ namespace GUI
             {
                 this.Validate();
                 this.hANHKIEMBindingSource.EndEdit();
-                this.hANHKIEMTableAdapter.Update(qUANLYHOCSINHDataSet.HANHKIEM);
+                this.hANHKIEMTableAdapter1.Update(qUANLYHOCSINHDataSet1.HANHKIEM);
                 MessageBox.Show("Lưu thành công !!!", "Thành công", MessageBoxButtons.OK);
             }
             catch (Exception ex)

@@ -20,8 +20,9 @@ namespace GUI
 
         private void frmHocLuc_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qUANLYHOCSINHDataSet.HOCLUC' table. You can move, or remove it, as needed.
-            this.hOCLUCTableAdapter.Fill(this.qUANLYHOCSINHDataSet.HOCLUC);
+            // TODO: This line of code loads data into the 'qUANLYHOCSINHDataSet1.HOCLUC' table. You can move, or remove it, as needed.
+            this.hOCLUCTableAdapter1.Fill(this.qUANLYHOCSINHDataSet1.HOCLUC);
+
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -30,7 +31,7 @@ namespace GUI
             {
                 this.Validate();
                 this.hOCLUCBindingSource.EndEdit();
-                this.hOCLUCTableAdapter.Update(qUANLYHOCSINHDataSet.HOCLUC);
+                this.hOCLUCTableAdapter1.Update(qUANLYHOCSINHDataSet1.HOCLUC);
                 MessageBox.Show("Lưu thành công !!!", "Thành công", MessageBoxButtons.OK);
             }
             catch (Exception ex)

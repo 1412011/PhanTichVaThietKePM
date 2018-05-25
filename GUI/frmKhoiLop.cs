@@ -20,8 +20,8 @@ namespace GUI
 
         private void frmKhoiLop_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qUANLYHOCSINHDataSet.KHOILOP' table. You can move, or remove it, as needed.
-            this.kHOILOPTableAdapter.Fill(this.qUANLYHOCSINHDataSet.KHOILOP);
+            // TODO: This line of code loads data into the 'qUANLYHOCSINHDataSet2.KHOILOP' table. You can move, or remove it, as needed.
+            this.kHOILOPTableAdapter2.Fill(this.qUANLYHOCSINHDataSet2.KHOILOP);
 
         }
 
@@ -31,7 +31,7 @@ namespace GUI
             {
                 this.Validate();
                 this.kHOILOPBindingSource.EndEdit();
-                this.kHOILOPTableAdapter.Update(qUANLYHOCSINHDataSet.KHOILOP);
+                this.kHOILOPTableAdapter2.Update(qUANLYHOCSINHDataSet2.KHOILOP);
                 MessageBox.Show("Lưu thành công !!!", "Thành công", MessageBoxButtons.OK);
             }
             catch (Exception ex)
@@ -42,7 +42,7 @@ namespace GUI
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            this.kHOILOPTableAdapter.Fill(this.qUANLYHOCSINHDataSet.KHOILOP);
+            this.kHOILOPTableAdapter1.Fill(this.qUANLYHOCSINHDataSet.KHOILOP);
         }
     }
 }

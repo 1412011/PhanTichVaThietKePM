@@ -22,8 +22,9 @@ namespace GUI
 
         private void frmBoMon_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qUANLYHOCSINHDataSet.BOMON' table. You can move, or remove it, as needed.
-            this.bOMONTableAdapter.Fill(this.qUANLYHOCSINHDataSet.BOMON);
+            // TODO: This line of code loads data into the 'qUANLYHOCSINHDataSet1.BOMON' table. You can move, or remove it, as needed.
+            this.bOMONTableAdapter1.Fill(this.qUANLYHOCSINHDataSet1.BOMON);
+
 
         }
 
@@ -32,8 +33,8 @@ namespace GUI
             try
             {
                 this.Validate();
-                this.bOMONBindingSource.EndEdit();
-                this.bOMONTableAdapter.Update(qUANLYHOCSINHDataSet.BOMON);
+                this.bOMONBindingSource1.EndEdit();
+                this.bOMONTableAdapter1.Update(qUANLYHOCSINHDataSet1.BOMON);
                 MessageBox.Show("Lưu thành công !!!", "Thành công", MessageBoxButtons.OK);
             }
             catch(Exception ex)

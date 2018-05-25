@@ -20,8 +20,9 @@ namespace GUI
 
         private void frmNamHoc_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qUANLYHOCSINHDataSet.NAMHOC' table. You can move, or remove it, as needed.
-            this.nAMHOCTableAdapter.Fill(this.qUANLYHOCSINHDataSet.NAMHOC);
+            // TODO: This line of code loads data into the 'qUANLYHOCSINHDataSet1.NAMHOC' table. You can move, or remove it, as needed.
+            this.nAMHOCTableAdapter1.Fill(this.qUANLYHOCSINHDataSet1.NAMHOC);
+
         }
 
         private void toolStripButtonNapLai_Click(object sender, EventArgs e)
@@ -40,7 +41,7 @@ namespace GUI
             {
                 this.Validate();
                 this.nAMHOCBindingSource.EndEdit();
-                this.nAMHOCTableAdapter.Update(qUANLYHOCSINHDataSet.NAMHOC);
+                this.nAMHOCTableAdapter1.Update(qUANLYHOCSINHDataSet1.NAMHOC);
                 MessageBox.Show("Lưu thành công !!!", "Thành công", MessageBoxButtons.OK);
             }
             catch (Exception ex)
