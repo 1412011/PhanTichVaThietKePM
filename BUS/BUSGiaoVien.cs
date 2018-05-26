@@ -51,5 +51,9 @@ namespace BUS
         {
             return dao_GiaoVien.get_all_full_info();
         }
+        public DataTable get_all_GV_LOP()
+        {
+            return dao_GiaoVien.get_all_GV_LOP();
+        }
     }
 }

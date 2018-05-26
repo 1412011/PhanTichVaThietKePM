@@ -50,5 +50,14 @@ namespace DAO
 
             return ccf.getDatatable(sql);
         }
+        public DataTable get_all_GV_LOP()
+        {
+            String sql = String.Format("select ng.maNguoiDung, tenNguoiDung " +
+                "FROM GIAOVIEN gv, NGUOIDUNG ng " +
+                "WHERE ng.maNguoiDung = gv.maNguoiDung");
+
+
+            return ccf.getDatatable(sql);
+        }
     }
 }
