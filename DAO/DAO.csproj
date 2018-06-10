@@ -47,6 +47,7 @@
     <Compile Include="DAOGiaoVien.cs" />
     <Compile Include="DAOHocSinh.cs" />
     <Compile Include="DAOLop.cs" />
+    <Compile Include="DAOLop_HocSinh.cs" />
     <Compile Include="DAONguoiDung.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -244,7 +244,6 @@
             // 
             this.txtMatKhau1.Location = new System.Drawing.Point(14, 359);
             this.txtMatKhau1.Name = "txtMatKhau1";
-            this.txtMatKhau1.Properties.PasswordChar = '*';
             this.txtMatKhau1.Properties.ReadOnly = true;
             this.txtMatKhau1.Size = new System.Drawing.Size(204, 20);
             this.txtMatKhau1.TabIndex = 9;
@@ -1024,6 +1023,7 @@
             this.bindingNavigatorSaveItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorSaveItem.Text = "Delete";
+            this.bindingNavigatorSaveItem.Click += new System.EventHandler(this.bindingNavigatorSaveItem_Click);
             // 
             // toolStripSeparator3
             // 

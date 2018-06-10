@@ -14,6 +14,7 @@ namespace GUI
 {
     public partial class frmGiaoVien : DevExpress.XtraEditors.XtraForm
     {
+        HandleButtonCURD handle = new HandleButtonCURD();
         BUSGiaoVien bus_GiaoVien = new BUSGiaoVien();
         BUSBoMon bus_BoMon = new BUSBoMon();
         BUSNguoiDung bus_NguoiDung = new BUSNguoiDung();
@@ -46,8 +47,7 @@ namespace GUI
 
         private void frmGiaoVien_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qUANLYHOCSINHDataSet1.BOMON' table. You can move, or remove it, as needed.
-            this.bOMONTableAdapter1.Fill(this.qUANLYHOCSINHDataSet1.BOMON);
+
 
 
         }
@@ -91,7 +91,7 @@ namespace GUI
             txtSDT.Text = gridViewGV.GetFocusedRowCellValue("sDT").ToString();
             txtEmail.Text = gridViewGV.GetFocusedRowCellValue("email").ToString();
             txtTaiKhoan.Text = gridViewGV.GetFocusedRowCellValue("taiKhoan").ToString();
-            txtMatKhau1.Text = gridViewGV.GetFocusedRowCellValue("matKhau").ToString();
+            txtMatKhau1.Text = handle.Decryptor(gridViewGV.GetFocusedRowCellValue("matKhau").ToString());
             txtMaDiachi.Text = gridViewGV.GetFocusedRowCellValue("maDiaChi").ToString();
             txtSonha.Text = gridViewGV.GetFocusedRowCellValue("soNha").ToString();
             txtDuong.Text = gridViewGV.GetFocusedRowCellValue("duong").ToString();
@@ -189,8 +189,8 @@ namespace GUI
                 sDT = txtSDT.Text,
                 email = txtEmail.Text,
                 taiKhoan = txtTaiKhoan.Text,
-                matKhau = txtMatKhau1.Text,
-            };
+                matKhau = handle.Encryptor(txtMatKhau1.Text),
+        };
             
             if(lblChucNangHientai.Text.Equals(_THEM_MOI))
             {
@@ -330,7 +330,7 @@ namespace GUI
 
         private void txtTengv_Validating(object sender, CancelEventArgs e)
         {
-            string errorMsg;
+            //string errorMsg;
             if (String.IsNullOrEmpty(txtTengv.Text) && txtTengv.ReadOnly == false)
             {
                 // Cancel the event and select the text to be corrected by the user.
@@ -343,6 +343,11 @@ namespace GUI
                 e.Cancel = false;
                 this.errorProvidergv.SetError(txtTengv, null);
             }
+        }
+
+        private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

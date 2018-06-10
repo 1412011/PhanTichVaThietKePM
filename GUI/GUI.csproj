@@ -64,6 +64,12 @@
     <Compile Include="frmBoMon.Designer.cs">
       <DependentUpon>frmBoMon.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHanhKiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,12 @@
     </Compile>
     <EmbeddedResource Include="frmBoMon.resx">
       <DependentUpon>frmBoMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangNhap.vi-VN.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGiaoVien.resx">
       <DependentUpon>frmGiaoVien.cs</DependentUpon>
@@ -227,6 +239,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\refresh_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginimage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

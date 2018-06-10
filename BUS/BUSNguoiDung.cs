@@ -20,17 +20,7 @@ namespace BUS
 
             if (countrows <= 0) return null; //data chưa có dòng nào, return
             DataRow row = dt.Rows[0];
-            return new NGUOIDUNG()
-            {
-                maNguoiDung = (row["maNguoiDung"] == DBNull.Value) ? (-1) : (int)row["maNguoiDung"],
-                tenNguoiDung = (String)row["tenNguoiDung"],
-                ngaySinh = (DateTime)row["ngaySinh"],
-                gioiTinh = (String)row["gioiTinh"],
-                email = (String)row["email"],
-                taiKhoan = (String)row["taiKhoan"],
-                matKhau = (String)row["matKhau"],
-
-            };
+            return ConvertNGUOIDUNG(row);
         }
         public int get_unique_last()
         {
@@ -50,6 +40,31 @@ namespace BUS
         public int insert(NGUOIDUNG entity)
         {
             return dao_nguoidung.insert(entity);
+        }
+
+        public NGUOIDUNG login(NGUOIDUNG nd)
+        {
+            DataTable dt = dao_nguoidung.login(nd);
+            int countrows = dt.Rows.Count;
+
+            if (countrows <= 0) return null; //data chưa có dòng nào, return
+            DataRow row = dt.Rows[0];
+            return ConvertNGUOIDUNG(row);
+        }
+
+        private NGUOIDUNG ConvertNGUOIDUNG(DataRow row)
+        {
+            return new NGUOIDUNG()
+            {
+                maNguoiDung = (row["maNguoiDung"] == DBNull.Value) ? (0) : (int)row["maNguoiDung"],
+                tenNguoiDung = (row["tenNguoiDung"] == DBNull.Value) ? ("") : (String)row["tenNguoiDung"],
+                ngaySinh = (row["ngaySinh"] == DBNull.Value) ? (new DateTime(0, 0, 0)) : (DateTime)row["ngaySinh"],
+                gioiTinh = (row["gioiTinh"] == DBNull.Value) ? ("") : (String)row["gioiTinh"],
+                email = (row["email"] == DBNull.Value) ? ("") : (String)row["email"],
+                taiKhoan = (row["taiKhoan"] == DBNull.Value) ? ("") : (String)row["taiKhoan"],
+                matKhau = (row["matKhau"] == DBNull.Value) ? ("") : (String)row["matKhau"],
+                diaChi = (row["diaChi"] == DBNull.Value) ? (0) : (int)row["diaChi"],
+            };
         }
     }
 }

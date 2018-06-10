@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraBars.Helpers;
+using DTO;
+using BUS;
 
 namespace GUI
 {
@@ -17,6 +19,26 @@ namespace GUI
         public frmMain()
         {
             InitializeComponent();
+            init_form();
+            //if(Session.userID==null)
+            //{
+            //    frmDangNhap dangnhap = new frmDangNhap();
+            //    dangnhap.Show();
+            //}
+        }
+
+        private void init_form()
+        {
+            if(Session.user_login == null)
+            {
+                barStaticTen.Caption = "Không có";
+                barStaticQuyen.Caption = "Không có";
+            }
+            else
+            {
+                barStaticTen.Caption = Session.user_login.tenNguoiDung;
+                barStaticQuyen.Caption = "Giáo viên";
+            }
         }
 
         private void barButtonItem15_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -103,6 +125,11 @@ namespace GUI
         private void barButtonItemQuiDinh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             _OpenForm_New(new frmQuyDinh());
+        }
+
+        private void barStaticItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
         }
     }
 }

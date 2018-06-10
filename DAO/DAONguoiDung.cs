@@ -44,5 +44,12 @@ namespace DAO
             String sql = String.Format("SELECT TOP 1 * FROM NGUOIDUNG ORDER BY maNguoiDung DESC");
             return ccf.getDatatable(sql);
         }
+
+        public DataTable login(NGUOIDUNG nd)
+        {
+            String sql = String.Format("SELECT * FROM NGUOIDUNG " +
+                "WHERE taiKhoan ='{0}' AND matKhau = '{1}'", nd.taiKhoan, nd.matKhau);
+            return ccf.getDatatable(sql);
+        }
     }
 }

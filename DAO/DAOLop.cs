@@ -14,8 +14,8 @@ namespace DAO
         public DataTable get_all_full_info()
         {
             String sql = String.Format("select maLop, tenLop, siSo, giaoVienCN, khoiLop, namHoc " +
-                "From LOP l, KHOILOP kh, NAMHOC nh, GIAOVIEN gv " +
-                "WHERE l.khoiLop = kh.tenKhoiLop AND l.namHoc = nh.tenNamHoc AND l.giaoVienCN = gv.maNguoiDung");
+                "From LOP l" +
+                "");
 
             return ccf.getDatatable(sql);
         }
