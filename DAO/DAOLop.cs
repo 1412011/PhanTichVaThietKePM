@@ -32,6 +32,10 @@ namespace DAO
 
             return ccf.getDatatable(sql);
         }
-
+         public DataTable get_Lop_KL_NH(KHOILOP k, NAMHOC n)
+        {
+            String sql = String.Format("select * from LOP where khoiLop = N'{0}' AND namHoc = N'{1}'",k.tenKhoiLop,n.tenNamHoc);
+            return ccf.getDatatable(sql);
+        }
     }
 }

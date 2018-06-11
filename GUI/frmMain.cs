@@ -131,5 +131,15 @@ namespace GUI
         {
 
         }
+
+        private void barButtonItemLopHoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            _OpenForm_New(new frmLopHoc());
+        }
+
+        private void barButtonItemPhanLop_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            _OpenForm_New(new frmPhanLop());
+        }
     }
 }

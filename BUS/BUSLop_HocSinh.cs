@@ -20,5 +20,23 @@ namespace BUS
             }
             else return dao_LopHocsinh.get_List_DanhSachLOP(l);
         }
+
+        public DataTable get_listHS_to_LOP(LOP l)
+        {
+            return dao_LopHocsinh.get_listHS_to_LOP(l);
+        }
+
+        public int insert(LOP_HOCSINH lh)
+        {
+            return dao_LopHocsinh.insert(lh);
+        }
+
+        public int get_stt_max_lop(LOP l)
+        {
+            DataTable dt = dao_LopHocsinh.get_STT_Max_to_Lop(l);
+            if (dt.Rows.Count == 0) return 0;
+
+            return (int)dt.Rows[0]["sTT"];
+        }
     }
 }

@@ -27,5 +27,10 @@ namespace BUS
         {
             return dao_Lop.get_all_NamHoc();
         }
+
+        public DataTable get_LOP_Khoilop_namHoc(KHOILOP k, NAMHOC n)
+        {
+            return dao_Lop.get_Lop_KL_NH(k, n);
+        }
     }
 }

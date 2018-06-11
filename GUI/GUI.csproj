@@ -112,6 +112,12 @@
     <Compile Include="frmNamHoc.Designer.cs">
       <DependentUpon>frmNamHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPhanLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhanLop.Designer.cs">
+      <DependentUpon>frmPhanLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQuyDinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNamHoc.resx">
       <DependentUpon>frmNamHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhanLop.resx">
+      <DependentUpon>frmPhanLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuyDinh.resx">
       <DependentUpon>frmQuyDinh.cs</DependentUpon>
