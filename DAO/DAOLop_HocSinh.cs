@@ -39,5 +39,18 @@ namespace DAO
             String sql = String.Format("SELECT TOP 1 sTT FROM LOP_HOCSINH WHERE maLop = {0} ORDER BY sTT DESC", l.maLop);
             return ccf.getDatatable(sql);
         }
+
+        public DataTable get_count_sisi_lop(LOP l)
+        {
+            String sql = String.Format("Select COUNT(maHocSinh) as SiSo From LOP_HOCSINH Where maLop = {0}", l.maLop);
+            return ccf.getDatatable(sql);
+        }
+
+
+        public int delete(int id)
+        {
+            String sql = String.Format("DELETE FROM LOP_HOCSINH WHERE maLop_HS = {0}",id);
+            return ccf.excuteNonQuery(sql);
+        }
     }
 }

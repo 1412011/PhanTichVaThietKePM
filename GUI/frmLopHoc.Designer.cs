@@ -67,6 +67,7 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonLuu = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonRefresh = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.lOPTableAdapter = new GUI.QUANLYHOCSINHDataSetTableAdapters.LOPTableAdapter();
             this.gridControlDANHSACH = new DevExpress.XtraGrid.GridControl();
             this.lOPHOCSINHBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -80,6 +81,20 @@
             this.hOCSINHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lOP_HOCSINHTableAdapter = new GUI.QUANLYHOCSINHDataSetTableAdapters.LOP_HOCSINHTableAdapter();
             this.hOCSINHTableAdapter = new GUI.QUANLYHOCSINHDataSetTableAdapters.HOCSINHTableAdapter();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btnupdatesiso = new DevExpress.XtraEditors.SimpleButton();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.bindingNavigatorDanhSachHS = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem1 = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlLop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet)).BeginInit();
@@ -103,12 +118,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEditLopDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEditHocsinhDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOCSINHBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorDanhSachHS)).BeginInit();
+            this.bindingNavigatorDanhSachHS.SuspendLayout();
             this.SuspendLayout();
             // 
             // gridControlLop
             // 
             this.gridControlLop.DataSource = this.lOPBindingSource;
-            this.gridControlLop.Location = new System.Drawing.Point(12, 35);
+            this.gridControlLop.Location = new System.Drawing.Point(5, 32);
             this.gridControlLop.MainView = this.gridViewLop;
             this.gridControlLop.Name = "gridControlLop";
             this.gridControlLop.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -120,7 +141,7 @@
             this.ColComboboxKhoiLop,
             this.ColComboboxNamHoc,
             this.LookupGVCN});
-            this.gridControlLop.Size = new System.Drawing.Size(535, 318);
+            this.gridControlLop.Size = new System.Drawing.Size(535, 322);
             this.gridControlLop.TabIndex = 0;
             this.gridControlLop.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewLop});
@@ -151,6 +172,7 @@
             this.gridViewLop.OptionsView.ShowAutoFilterRow = true;
             this.gridViewLop.OptionsView.ShowGroupPanel = false;
             this.gridViewLop.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridViewLop_RowClick);
+            this.gridViewLop.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.gridViewLop_InitNewRow);
             // 
             // gridColumn1
             // 
@@ -319,17 +341,19 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.toolStripButtonLuu,
-            this.toolStripButtonRefresh});
-            this.bindingNavigatorLop.Location = new System.Drawing.Point(0, 0);
+            this.toolStripButtonRefresh,
+            this.toolStripSeparator1});
+            this.bindingNavigatorLop.Location = new System.Drawing.Point(2, 2);
             this.bindingNavigatorLop.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigatorLop.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigatorLop.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.bindingNavigatorLop.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigatorLop.Name = "bindingNavigatorLop";
             this.bindingNavigatorLop.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigatorLop.Size = new System.Drawing.Size(990, 25);
+            this.bindingNavigatorLop.Size = new System.Drawing.Size(543, 25);
             this.bindingNavigatorLop.TabIndex = 1;
             this.bindingNavigatorLop.Text = "bindingNavigator1";
+            this.bindingNavigatorLop.RefreshItems += new System.EventHandler(this.bindingNavigatorLop_RefreshItems);
             // 
             // bindingNavigatorCountItem
             // 
@@ -438,6 +462,11 @@
             this.toolStripButtonRefresh.Text = "toolStripButton2";
             this.toolStripButtonRefresh.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
             // lOPTableAdapter
             // 
             this.lOPTableAdapter.ClearBeforeFill = true;
@@ -445,13 +474,13 @@
             // gridControlDANHSACH
             // 
             this.gridControlDANHSACH.DataSource = this.lOPHOCSINHBindingSource;
-            this.gridControlDANHSACH.Location = new System.Drawing.Point(553, 35);
+            this.gridControlDANHSACH.Location = new System.Drawing.Point(11, 32);
             this.gridControlDANHSACH.MainView = this.gridViewDANHSACH;
             this.gridControlDANHSACH.Name = "gridControlDANHSACH";
             this.gridControlDANHSACH.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.LookUpEditLopDS,
             this.LookUpEditHocsinhDS});
-            this.gridControlDANHSACH.Size = new System.Drawing.Size(413, 318);
+            this.gridControlDANHSACH.Size = new System.Drawing.Size(413, 320);
             this.gridControlDANHSACH.TabIndex = 2;
             this.gridControlDANHSACH.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewDANHSACH});
@@ -470,13 +499,17 @@
             this.colHocSinh});
             this.gridViewDANHSACH.GridControl = this.gridControlDANHSACH;
             this.gridViewDANHSACH.Name = "gridViewDANHSACH";
+            this.gridViewDANHSACH.OptionsView.ShowAutoFilterRow = true;
             this.gridViewDANHSACH.OptionsView.ShowGroupPanel = false;
+            this.gridViewDANHSACH.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridViewDANHSACH_RowClick);
+            this.gridViewDANHSACH.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridViewDANHSACH_RowCellClick);
             // 
             // maDS
             // 
-            this.maDS.Caption = "Mã danh sách";
+            this.maDS.Caption = "Mã DS";
             this.maDS.FieldName = "maLop_HS";
             this.maDS.Name = "maDS";
+            this.maDS.OptionsColumn.AllowEdit = false;
             this.maDS.OptionsColumn.ReadOnly = true;
             this.maDS.Visible = true;
             this.maDS.VisibleIndex = 0;
@@ -555,14 +588,145 @@
             // 
             this.hOCSINHTableAdapter.ClearBeforeFill = true;
             // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.btnupdatesiso);
+            this.panelControl1.Controls.Add(this.gridControlLop);
+            this.panelControl1.Controls.Add(this.bindingNavigatorLop);
+            this.panelControl1.Location = new System.Drawing.Point(2, 3);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(547, 402);
+            this.panelControl1.TabIndex = 3;
+            // 
+            // btnupdatesiso
+            // 
+            this.btnupdatesiso.Location = new System.Drawing.Point(459, 4);
+            this.btnupdatesiso.Name = "btnupdatesiso";
+            this.btnupdatesiso.Size = new System.Drawing.Size(79, 25);
+            this.btnupdatesiso.TabIndex = 2;
+            this.btnupdatesiso.Text = "Cập nhật sĩ số";
+            this.btnupdatesiso.Click += new System.EventHandler(this.btnupdatesiso_Click);
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Controls.Add(this.bindingNavigatorDanhSachHS);
+            this.panelControl2.Controls.Add(this.gridControlDANHSACH);
+            this.panelControl2.Location = new System.Drawing.Point(555, 3);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(434, 402);
+            this.panelControl2.TabIndex = 2;
+            // 
+            // bindingNavigatorDanhSachHS
+            // 
+            this.bindingNavigatorDanhSachHS.AddNewItem = null;
+            this.bindingNavigatorDanhSachHS.CountItem = this.bindingNavigatorCountItem1;
+            this.bindingNavigatorDanhSachHS.DeleteItem = null;
+            this.bindingNavigatorDanhSachHS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem1,
+            this.bindingNavigatorMovePreviousItem1,
+            this.bindingNavigatorSeparator3,
+            this.bindingNavigatorPositionItem1,
+            this.bindingNavigatorCountItem1,
+            this.bindingNavigatorSeparator4,
+            this.bindingNavigatorMoveNextItem1,
+            this.bindingNavigatorMoveLastItem1,
+            this.bindingNavigatorSeparator5,
+            this.bindingNavigatorDeleteItem1});
+            this.bindingNavigatorDanhSachHS.Location = new System.Drawing.Point(2, 2);
+            this.bindingNavigatorDanhSachHS.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
+            this.bindingNavigatorDanhSachHS.MoveLastItem = this.bindingNavigatorMoveLastItem1;
+            this.bindingNavigatorDanhSachHS.MoveNextItem = this.bindingNavigatorMoveNextItem1;
+            this.bindingNavigatorDanhSachHS.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
+            this.bindingNavigatorDanhSachHS.Name = "bindingNavigatorDanhSachHS";
+            this.bindingNavigatorDanhSachHS.PositionItem = this.bindingNavigatorPositionItem1;
+            this.bindingNavigatorDanhSachHS.Size = new System.Drawing.Size(430, 25);
+            this.bindingNavigatorDanhSachHS.TabIndex = 3;
+            this.bindingNavigatorDanhSachHS.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorCountItem1
+            // 
+            this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
+            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem1.Text = "of {0}";
+            this.bindingNavigatorCountItem1.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem1
+            // 
+            this.bindingNavigatorDeleteItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem1.Image")));
+            this.bindingNavigatorDeleteItem1.Name = "bindingNavigatorDeleteItem1";
+            this.bindingNavigatorDeleteItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem1.Text = "Delete";
+            this.bindingNavigatorDeleteItem1.Click += new System.EventHandler(this.bindingNavigatorDeleteItem1_Click);
+            // 
+            // bindingNavigatorMoveFirstItem1
+            // 
+            this.bindingNavigatorMoveFirstItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem1.Image")));
+            this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem1";
+            this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem1.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem1
+            // 
+            this.bindingNavigatorMovePreviousItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem1.Image")));
+            this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem1";
+            this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem1.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator3
+            // 
+            this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator3";
+            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem1
+            // 
+            this.bindingNavigatorPositionItem1.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem1.AutoSize = false;
+            this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem1";
+            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem1.Text = "0";
+            this.bindingNavigatorPositionItem1.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator4
+            // 
+            this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator4";
+            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem1
+            // 
+            this.bindingNavigatorMoveNextItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem1.Image")));
+            this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem1";
+            this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem1.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem1
+            // 
+            this.bindingNavigatorMoveLastItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem1.Image")));
+            this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem1";
+            this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem1.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator5
+            // 
+            this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
+            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
             // frmLopHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(990, 406);
-            this.Controls.Add(this.gridControlDANHSACH);
-            this.Controls.Add(this.bindingNavigatorLop);
-            this.Controls.Add(this.gridControlLop);
+            this.ClientSize = new System.Drawing.Size(1002, 417);
+            this.Controls.Add(this.panelControl2);
+            this.Controls.Add(this.panelControl1);
             this.Name = "frmLopHoc";
             this.Text = "Lớp";
             this.Load += new System.EventHandler(this.frmLopHoc_Load);
@@ -590,8 +754,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEditLopDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEditHocsinhDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOCSINHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorDanhSachHS)).EndInit();
+            this.bindingNavigatorDanhSachHS.ResumeLayout(false);
+            this.bindingNavigatorDanhSachHS.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -647,5 +819,20 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit LookUpEditHocsinhDS;
         private System.Windows.Forms.BindingSource hOCSINHBindingSource;
         private QUANLYHOCSINHDataSetTableAdapters.HOCSINHTableAdapter hOCSINHTableAdapter;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private System.Windows.Forms.BindingNavigator bindingNavigatorDanhSachHS;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem1;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator3;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem1;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator4;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem1;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator5;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private DevExpress.XtraEditors.SimpleButton btnupdatesiso;
     }
 }

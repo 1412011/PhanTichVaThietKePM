@@ -20,6 +20,12 @@ namespace DAO
             return ccf.getDatatable(sql);
         }
 
+        public DataTable get_all_malop()
+        {
+            String sql = String.Format("Select maLop From LOP");
+            return ccf.getDatatable(sql);
+        }
+
         public DataTable get_all_Khoilop()
         {
             String sql = String.Format("Select tenKhoiLop From KHOILOP");
@@ -36,6 +42,11 @@ namespace DAO
         {
             String sql = String.Format("select * from LOP where khoiLop = N'{0}' AND namHoc = N'{1}'",k.tenKhoiLop,n.tenNamHoc);
             return ccf.getDatatable(sql);
+        }
+        public int update_sisi_lop(LOP l, int ss)
+        {
+            String sql = String.Format("UPDATE LOP SET siSo = {0} WHERE maLop = {1}",ss,l.maLop);
+            return ccf.excuteNonQuery(sql);
         }
     }
 }

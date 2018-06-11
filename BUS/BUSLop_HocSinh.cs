@@ -38,5 +38,16 @@ namespace BUS
 
             return (int)dt.Rows[0]["sTT"];
         }
+
+        public int get_count_sisi_lop(LOP l)
+        {
+            DataTable dt = dao_LopHocsinh.get_count_sisi_lop(l);
+            if (dt.Rows.Count == 0) return 0;
+            return (int)dt.Rows[0]["SiSo"];
+        }
+        public int delete(int id)
+        {
+            return dao_LopHocsinh.delete(id);
+        }
     }
 }

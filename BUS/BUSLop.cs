@@ -32,5 +32,20 @@ namespace BUS
         {
             return dao_Lop.get_Lop_KL_NH(k, n);
         }
+
+        public List<int> get_All_maLop()
+        {
+            List<int> ls = new List<int>();
+            DataTable dt = dao_Lop.get_all_malop();
+            foreach(DataRow r in dt.Rows)
+            {
+                ls.Add((int)r["maLop"]);
+            }
+            return ls;
+        }
+        public int update_sisi_lop(LOP l, int ss)
+        {
+            return dao_Lop.update_sisi_lop(l, ss);
+        }
     }
 }
