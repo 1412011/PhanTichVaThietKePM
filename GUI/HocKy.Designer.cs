@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HocKy));
             this.bindingNavigatorHocKy = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.hOCKYBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qUANLYHOCSINHDataSet1 = new GUI.QUANLYHOCSINHDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -48,15 +50,13 @@
             this.gridViewHocKy = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.coltenHocKy = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colheSo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.qUANLYHOCSINHDataSet1 = new GUI.QUANLYHOCSINHDataSet();
-            this.hOCKYBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hOCKYTableAdapter1 = new GUI.QUANLYHOCSINHDataSetTableAdapters.HOCKYTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorHocKy)).BeginInit();
             this.bindingNavigatorHocKy.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hOCKYBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlHocKy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewHocKy)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hOCKYBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigatorHocKy
@@ -99,6 +99,16 @@
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             this.bindingNavigatorAddNewItem.ToolTipText = "Thêm";
+            // 
+            // hOCKYBindingSource
+            // 
+            this.hOCKYBindingSource.DataMember = "HOCKY";
+            this.hOCKYBindingSource.DataSource = this.qUANLYHOCSINHDataSet1;
+            // 
+            // qUANLYHOCSINHDataSet1
+            // 
+            this.qUANLYHOCSINHDataSet1.DataSetName = "QUANLYHOCSINHDataSet";
+            this.qUANLYHOCSINHDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -236,16 +246,6 @@
             this.colheSo.Visible = true;
             this.colheSo.VisibleIndex = 1;
             // 
-            // qUANLYHOCSINHDataSet1
-            // 
-            this.qUANLYHOCSINHDataSet1.DataSetName = "QUANLYHOCSINHDataSet";
-            this.qUANLYHOCSINHDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // hOCKYBindingSource
-            // 
-            this.hOCKYBindingSource.DataMember = "HOCKY";
-            this.hOCKYBindingSource.DataSource = this.qUANLYHOCSINHDataSet1;
-            // 
             // hOCKYTableAdapter1
             // 
             this.hOCKYTableAdapter1.ClearBeforeFill = true;
@@ -258,15 +258,15 @@
             this.Controls.Add(this.gridControlHocKy);
             this.Controls.Add(this.bindingNavigatorHocKy);
             this.Name = "HocKy";
-            this.Text = "HocKy";
+            this.Text = "Học kỳ";
             this.Load += new System.EventHandler(this.HocKy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorHocKy)).EndInit();
             this.bindingNavigatorHocKy.ResumeLayout(false);
             this.bindingNavigatorHocKy.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hOCKYBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlHocKy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewHocKy)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hOCKYBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

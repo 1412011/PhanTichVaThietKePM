@@ -25,6 +25,7 @@ namespace GUI
             //    frmDangNhap dangnhap = new frmDangNhap();
             //    dangnhap.Show();
             //}
+         
         }
 
         private void init_form()
@@ -140,6 +141,29 @@ namespace GUI
         private void barButtonItemPhanLop_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             _OpenForm_New(new frmPhanLop());
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem20_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            _OpenForm_New(new frmKetQuaThang());
+        }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmDangNhap dangnhap = new frmDangNhap();
+            this.Hide();
+            dangnhap.ShowDialog();
+            this.Close();
         }
     }
 }

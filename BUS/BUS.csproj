@@ -41,12 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUSBangDiem.cs" />
     <Compile Include="BUSBoMon.cs" />
     <Compile Include="BUSDiaChi.cs" />
     <Compile Include="BUSGiaoVien.cs" />
     <Compile Include="BUSHocSinh.cs" />
+    <Compile Include="BUSKetQuaHocTap.cs" />
     <Compile Include="BUSLop.cs" />
     <Compile Include="BUSLop_HocSinh.cs" />
+    <Compile Include="BUSMon_Lop.cs" />
     <Compile Include="BUSNguoiDung.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

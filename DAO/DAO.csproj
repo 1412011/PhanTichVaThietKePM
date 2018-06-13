@@ -42,12 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectorFactory.cs" />
+    <Compile Include="DAOBangDiem.cs" />
     <Compile Include="DAOBoMon.cs" />
     <Compile Include="DAODiaChi.cs" />
     <Compile Include="DAOGiaoVien.cs" />
     <Compile Include="DAOHocSinh.cs" />
+    <Compile Include="DAOKetQuaHocTap.cs" />
     <Compile Include="DAOLop.cs" />
     <Compile Include="DAOLop_HocSinh.cs" />
+    <Compile Include="DAOMon_Lop.cs" />
     <Compile Include="DAONguoiDung.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

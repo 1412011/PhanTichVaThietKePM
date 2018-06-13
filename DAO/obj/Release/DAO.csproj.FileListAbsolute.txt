@@ -1,0 +1,12 @@
+D:\Git DOAN\QLHSC3\DAO\bin\Release\DAO.dll
+D:\Git DOAN\QLHSC3\DAO\bin\Release\DAO.pdb
+D:\Git DOAN\QLHSC3\DAO\bin\Release\DTO.dll
+D:\Git DOAN\QLHSC3\DAO\bin\Release\EntityFramework.dll
+D:\Git DOAN\QLHSC3\DAO\bin\Release\DTO.pdb
+D:\Git DOAN\QLHSC3\DAO\bin\Release\DTO.dll.config
+D:\Git DOAN\QLHSC3\DAO\bin\Release\EntityFramework.xml
+D:\Git DOAN\QLHSC3\DAO\obj\Release\DAO.csprojAssemblyReference.cache
+D:\Git DOAN\QLHSC3\DAO\obj\Release\DAO.csproj.CoreCompileInputs.cache
+D:\Git DOAN\QLHSC3\DAO\obj\Release\DAO.csproj.CopyComplete
+D:\Git DOAN\QLHSC3\DAO\obj\Release\DAO.dll
+D:\Git DOAN\QLHSC3\DAO\obj\Release\DAO.pdb

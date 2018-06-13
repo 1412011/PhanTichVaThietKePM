@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKhoiLop));
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.kHOILOPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qUANLYHOCSINHDataSet2 = new GUI.QUANLYHOCSINHDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -48,15 +50,13 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.coltenKhoiLop = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colmoTa = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.qUANLYHOCSINHDataSet2 = new GUI.QUANLYHOCSINHDataSet();
-            this.kHOILOPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kHOILOPTableAdapter2 = new GUI.QUANLYHOCSINHDataSetTableAdapters.KHOILOPTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kHOILOPBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kHOILOPBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator1
@@ -98,6 +98,16 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // kHOILOPBindingSource
+            // 
+            this.kHOILOPBindingSource.DataMember = "KHOILOP";
+            this.kHOILOPBindingSource.DataSource = this.qUANLYHOCSINHDataSet2;
+            // 
+            // qUANLYHOCSINHDataSet2
+            // 
+            this.qUANLYHOCSINHDataSet2.DataSetName = "QUANLYHOCSINHDataSet";
+            this.qUANLYHOCSINHDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -231,16 +241,6 @@
             this.colmoTa.Visible = true;
             this.colmoTa.VisibleIndex = 1;
             // 
-            // qUANLYHOCSINHDataSet2
-            // 
-            this.qUANLYHOCSINHDataSet2.DataSetName = "QUANLYHOCSINHDataSet";
-            this.qUANLYHOCSINHDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // kHOILOPBindingSource
-            // 
-            this.kHOILOPBindingSource.DataMember = "KHOILOP";
-            this.kHOILOPBindingSource.DataSource = this.qUANLYHOCSINHDataSet2;
-            // 
             // kHOILOPTableAdapter2
             // 
             this.kHOILOPTableAdapter2.ClearBeforeFill = true;
@@ -253,15 +253,15 @@
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "frmKhoiLop";
-            this.Text = "frmKhoiLop";
+            this.Text = "Khối lớp";
             this.Load += new System.EventHandler(this.frmKhoiLop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kHOILOPBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLYHOCSINHDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kHOILOPBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

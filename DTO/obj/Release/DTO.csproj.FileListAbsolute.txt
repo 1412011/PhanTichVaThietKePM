@@ -1,0 +1,12 @@
+D:\Git DOAN\QLHSC3\DTO\bin\Release\DTO.dll.config
+D:\Git DOAN\QLHSC3\DTO\bin\Release\DTO.dll
+D:\Git DOAN\QLHSC3\DTO\bin\Release\DTO.pdb
+D:\Git DOAN\QLHSC3\DTO\bin\Release\EntityFramework.dll
+D:\Git DOAN\QLHSC3\DTO\bin\Release\EntityFramework.SqlServer.dll
+D:\Git DOAN\QLHSC3\DTO\bin\Release\EntityFramework.xml
+D:\Git DOAN\QLHSC3\DTO\bin\Release\EntityFramework.SqlServer.xml
+D:\Git DOAN\QLHSC3\DTO\obj\Release\DTO.csprojAssemblyReference.cache
+D:\Git DOAN\QLHSC3\DTO\obj\Release\DTO.csproj.CoreCompileInputs.cache
+D:\Git DOAN\QLHSC3\DTO\obj\Release\DTO.csproj.CopyComplete
+D:\Git DOAN\QLHSC3\DTO\obj\Release\DTO.dll
+D:\Git DOAN\QLHSC3\DTO\obj\Release\DTO.pdb

@@ -276,7 +276,6 @@
             // 
             // groupControl2
             // 
-            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.Appearance.Options.UseTextOptions = true;
             this.groupControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.groupControl2.AppearanceCaption.Options.UseTextOptions = true;
@@ -331,6 +330,7 @@
             this.lookUpEditKhoiLopMoi.Size = new System.Drawing.Size(146, 20);
             this.lookUpEditKhoiLopMoi.TabIndex = 8;
             this.lookUpEditKhoiLopMoi.EditValueChanged += new System.EventHandler(this.lookUpEditKhoiLopMoi_EditValueChanged);
+            this.lookUpEditKhoiLopMoi.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.lookUpEditKhoiLopMoi_EditValueChanging);
             // 
             // labelControl5
             // 
@@ -353,6 +353,7 @@
             this.lookUpEditNamHocMoi.Size = new System.Drawing.Size(146, 20);
             this.lookUpEditNamHocMoi.TabIndex = 7;
             this.lookUpEditNamHocMoi.EditValueChanged += new System.EventHandler(this.lookUpEditNamHocMoi_EditValueChanged);
+            this.lookUpEditNamHocMoi.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.lookUpEditNamHocMoi_EditValueChanging);
             // 
             // labelControl6
             // 
@@ -364,7 +365,6 @@
             // 
             // btnThemmot
             // 
-            this.btnThemmot.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThemmot.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnThemmot.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemmot.ImageOptions.Image")));
             this.btnThemmot.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
@@ -377,7 +377,6 @@
             // 
             // btnThemTatca
             // 
-            this.btnThemTatca.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThemTatca.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnThemTatca.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemTatca.ImageOptions.Image")));
             this.btnThemTatca.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
@@ -451,7 +450,6 @@
             // 
             // gridControlHocSinhLopMoi
             // 
-            this.gridControlHocSinhLopMoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControlHocSinhLopMoi.Location = new System.Drawing.Point(529, 157);
             this.gridControlHocSinhLopMoi.MainView = this.gridViewHocSinhLopMoi;
             this.gridControlHocSinhLopMoi.Name = "gridControlHocSinhLopMoi";
@@ -518,7 +516,6 @@
             // 
             // btnLuuThayDoi
             // 
-            this.btnLuuThayDoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLuuThayDoi.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnLuuThayDoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuThayDoi.ImageOptions.Image")));
             this.btnLuuThayDoi.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
@@ -531,7 +528,6 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
             this.simpleButton1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;

@@ -280,5 +280,15 @@ namespace GUI
             gridViewHocSinhlopCu.SelectAll();
             btnThemmot_Click(null, null);
         }
+
+        private void lookUpEditKhoiLopMoi_EditValueChanging(object sender, DevExpress.XtraEditors.Controls.ChangingEventArgs e)
+        {
+            lookUpEditLopmoi_EditValueChanging(null, null);
+        }
+
+        private void lookUpEditNamHocMoi_EditValueChanging(object sender, DevExpress.XtraEditors.Controls.ChangingEventArgs e)
+        {
+            lookUpEditLopmoi_EditValueChanging(null, null);
+        }
     }
 }

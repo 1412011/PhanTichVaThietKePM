@@ -44,8 +44,13 @@ namespace GUI
             }
             else
             {
+                // đăng nhập thành công
                 Session.user_login = userlogin;
-                MessageBox.Show(userlogin.maNguoiDung.ToString() + userlogin.tenNguoiDung);
+                //MessageBox.Show(userlogin.maNguoiDung.ToString() + userlogin.tenNguoiDung);
+                frmMain main = new frmMain();
+                this.Hide();
+                main.ShowDialog();
+                this.Close();
             }
         }
 
